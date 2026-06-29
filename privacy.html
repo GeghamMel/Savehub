@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | SaveHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a>
+    <nav class="header-nav"><a href="vpn.html">VPN</a><a href="software.html">Software</a><a href="courses.html">Courses</a></nav>
+    <div class="lang-btns">
+      <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="langRU" onclick="setLang('ru')">RU</button>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a><a href="vpn.html">VPN</a><a href="software.html">Software</a>
+</nav>
+<div style="background:linear-gradient(135deg,#1e1b4b,#4f46e5);padding:56px 24px;color:white;text-align:center;">
+  <div class="container">
+    <h1 style="font-family:var(--font-display);font-size:2.5rem;font-weight:800;margin-bottom:12px;" data-en="Privacy Policy" data-ru="Политика конфиденциальности">Privacy Policy</h1>
+  </div>
+</div>
+<main>
+  <div class="container" style="padding:48px 24px 80px;max-width:720px;">
+    <p style="color:#374151;margin-bottom:20px;" data-en="SaveHub respects your privacy. We use Google Analytics to understand site usage (anonymised data only). We use cookies for language preferences and analytics. We do not sell your personal data to third parties." data-ru="SaveHub уважает вашу конфиденциальность. Мы используем Google Analytics для анализа использования сайта (только анонимные данные). Мы используем файлы cookie для языковых предпочтений и аналитики. Мы не продаём ваши персональные данные третьим лицам.">SaveHub respects your privacy. We use Google Analytics for anonymised site analytics only.</p>
+    <p style="color:#374151;" data-en="This site contains affiliate links. When you click these links and make a purchase, we may earn a commission at no extra cost to you." data-ru="Этот сайт содержит партнёрские ссылки. Когда вы переходите по этим ссылкам и совершаете покупку, мы можем получить комиссию без дополнительных затрат для вас.">This site contains affiliate links — we may earn a commission when you purchase through them.</p>
+  </div>
+</main><footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a></div>
+      <div class="footer-col"><h4>Categories</h4><a href="vpn.html">VPN</a><a href="software.html">Software</a><a href="courses.html">Courses</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; <span id="year"></span> SaveHub.com</span></div>
+  </div>
+</footer>
+<div id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</div>
+<script>
+var lang=localStorage.getItem('sh_lang')||'en';
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('mobileNav').classList.toggle('open');});
+function setLang(l){lang=l;localStorage.setItem('sh_lang',l);document.getElementById('langEN').classList.toggle('active',l==='en');document.getElementById('langRU').classList.toggle('active',l==='ru');document.querySelectorAll('[data-en]').forEach(function(el){var t=el.getAttribute('data-'+l);if(t)el.innerHTML=t;});}
+function applyLang(l){document.documentElement.lang=l;document.querySelectorAll('[data-en]').forEach(function(el){var t=el.getAttribute('data-'+l);if(t)el.innerHTML=t;});}
+if(lang==='ru'){document.getElementById('langRU').classList.add('active');document.getElementById('langEN').classList.remove('active');applyLang('ru');}
+</script>
+</body></html>
