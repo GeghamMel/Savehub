@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Best Web Hosting Promo Codes 2026 | SaveHub</title>
-  <meta name="description" content="Best web hosting promo codes 2026. Save on Hostinger, Namecheap, Bluehost and more." />
+  <meta name="description" content="Save on Hostinger, Namecheap, Bluehost, SiteGround and more hosting services." />
   <link rel="stylesheet" href="style.css" />
   <style>
     .cat-hero { background: linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%); padding: 56px 24px; color: white; text-align: center; }
@@ -18,8 +18,10 @@
     <a href="/" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a>
     <div class="header-search"><input type="text" placeholder="Search deals..." /></div>
     <nav class="header-nav">
-      <a href="vpn.html">VPN</a><a href="software.html">Software</a>
-      <a href="courses.html">Courses</a><a href="blog/">Blog</a>
+      <a href="vpn.html">VPN</a>
+      <a href="software.html">Software</a>
+      <a href="courses.html">Courses</a>
+      <a href="blog/index.html">Blog</a>
     </nav>
     <div class="lang-btns">
       <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
@@ -29,93 +31,146 @@
   </div>
 </header>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="/">Home</a><a href="vpn.html">VPN</a>
-  <a href="software.html">Software</a><a href="courses.html">Courses</a>
-  <a href="streaming.html">Streaming</a><a href="hosting.html">Hosting</a>
+  <a href="/">Home</a>
+  <a href="vpn.html">🔒 VPN</a>
+  <a href="software.html">💻 Software</a>
+  <a href="courses.html">🎓 Courses</a>
+  <a href="streaming.html">🎬 Streaming</a>
+  <a href="hosting.html">☁️ Hosting</a>
 </nav>
+
 <div class="cat-hero">
   <div class="container">
     <h1 data-en="Best Web Hosting Promo Codes 2026" data-ru="Лучшие промокоды на хостинг 2026">Best Web Hosting Promo Codes 2026</h1>
     <p data-en="Save on Hostinger, Namecheap, Bluehost and more. Start your website for less." data-ru="Экономьте на Hostinger, Namecheap, Bluehost. Запустите сайт дешевле.">Save on Hostinger, Namecheap, Bluehost and more. Start your website for less.</p>
   </div>
 </div>
+
 <main style="padding:40px 0 80px;">
   <div class="container">
     <div class="promos-grid" id="itemsGrid"></div>
   </div>
 </main>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><a href="/" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a><p>Best promo codes and deals.</p></div>
-      <div class="footer-col"><h4>Categories</h4><a href="vpn.html">VPN</a><a href="software.html">Software</a><a href="courses.html">Courses</a></div>
-      <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div>
+      <div class="footer-brand">
+        <a href="/" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a>
+        <p>Best promo codes and deals updated daily.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="vpn.html">VPN</a>
+        <a href="software.html">Software</a>
+        <a href="courses.html">Courses</a>
+        <a href="streaming.html">Streaming</a>
+        <a href="hosting.html">Hosting</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
     <div class="footer-bottom"><span>&copy; <span id="year"></span> SaveHub.com</span></div>
   </div>
 </footer>
+
 <div id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</div>
 <div id="readProgress"></div>
+
 <script>
-var lang=localStorage.getItem('sh_lang')||'en';
-var ITEMS=ITEMS_JSON;
-function renderItems(){
-  var l=lang;
-  var grid=document.getElementById('itemsGrid');
-  if(!grid)return;
-  grid.innerHTML=ITEMS.map(function(p){
-    var bc=p.badge==='hot'?'badge-hot':p.badge==='new'?'badge-new':'badge-verified';
-    return '<div class="promo-card">'+
-      '<div class="promo-card-header">'+
-        '<div class="promo-logo">'+p.logo+'</div>'+
-        '<div class="promo-info"><h3>'+p.name+'</h3><p>'+(l==='ru'?p.cat_ru:p.cat_en)+'</p></div>'+
-        '<div class="promo-rating"><div class="promo-stars">'+p.stars+'</div><div class="promo-reviews">'+(l==='ru'?p.reviews_ru:p.reviews_en)+'</div></div>'+
-      '</div>'+
-      '<div class="promo-card-body">'+
-        '<div class="promo-deal">'+
-          '<div class="promo-deal-title">'+(l==='ru'?p.deal_ru:p.deal_en)+'</div>'+
-          '<div class="promo-deal-desc">'+(l==='ru'?p.desc_ru:p.desc_en)+'</div>'+
-        '</div>'+
-        '<div class="promo-code-wrap">'+
-          '<div class="promo-code">'+p.code+'</div>'+
-          '<button class="btn-copy" onclick="copyC(''+p.code+'',''+p.url+'',this)">'+(l==='ru'?'Копировать':'Copy & Visit')+'</button>'+
-        '</div>'+
-      '</div>'+
-      '<div class="promo-card-footer">'+
-        '<span class="promo-badge '+bc+'">'+(l==='ru'?p.badge_ru:p.badge_en)+'</span>'+
-        '<a href="'+p.url+'" target="_blank" rel="nofollow" class="btn-visit">'+(l==='ru'?'На сайт':'Visit')+'</a>'+
-      '</div>'+
-    '</div>';
-  }).join('');
-}
-function copyC(code,url,btn){
-  navigator.clipboard.writeText(code).catch(function(){});
-  var o=btn.textContent;btn.textContent='Copied!';btn.classList.add('copied');
-  setTimeout(function(){window.open(url,'_blank','noopener');btn.textContent=o;btn.classList.remove('copied');},800);
-}
-function setLang(l){
-  lang=l;localStorage.setItem('sh_lang',l);
-  document.getElementById('langEN').classList.toggle('active',l==='en');
-  document.getElementById('langRU').classList.toggle('active',l==='ru');
-  applyLang(l);renderItems();
-}
-function applyLang(l){
-  document.documentElement.lang=l;
-  document.querySelectorAll('[data-en]').forEach(function(el){
-    var t=el.getAttribute('data-'+l);if(!t)return;
-    if(el.tagName==='INPUT'){el.placeholder=t;return;}
-    if(t.includes('<'))el.innerHTML=t;else el.textContent=t;
+var lang = localStorage.getItem('sh_lang') || 'en';
+var ITEMS = [{"logo": "🌐", "name": "Hostinger", "cat_en": "Hosting", "cat_ru": "Хостинг", "desc_en": "Most affordable web hosting with great performance. From $1.99/month.", "desc_ru": "Самый доступный хостинг с отличной производительностью. От $1.99/месяц.", "deal_en": "82% OFF + Free Domain", "deal_ru": "Скидка 82% + бесплатный домен", "code": "HOSTINGER82", "badge": "hot", "badge_en": "Best Value", "badge_ru": "Лучшая цена", "url": "https://hostinger.com", "stars": "4.6/5", "reviews_en": "32,000 reviews", "reviews_ru": "32 000 отзывов"}, {"logo": "🏷️", "name": "Namecheap", "cat_en": "Domains", "cat_ru": "Домены", "desc_en": "Cheap domain registration + reliable hosting. .com domains from $5.98/year.", "desc_ru": "Дешёвая регистрация доменов + надёжный хостинг. Домены .com от $5.98/год.", "deal_en": ".com Domain for $5.98/year", "deal_ru": "Домен .com за $5.98/год", "code": "CHEAP598", "badge": "verified", "badge_en": "Verified", "badge_ru": "Проверен", "url": "https://namecheap.com", "stars": "4.7/5", "reviews_en": "18,000 reviews", "reviews_ru": "18 000 отзывов"}, {"logo": "🔵", "name": "Bluehost", "cat_en": "Hosting", "cat_ru": "Хостинг", "desc_en": "WordPress recommended hosting. Easy setup, 24/7 support, free SSL.", "desc_ru": "Хостинг рекомендованный WordPress. Простая настройка, поддержка 24/7.", "deal_en": "65% OFF + Free Domain for 1 Year", "deal_ru": "Скидка 65% + бесплатный домен на год", "code": "BLUE65", "badge": "new", "badge_en": "New Deal", "badge_ru": "Новое предложение", "url": "https://bluehost.com", "stars": "4.3/5", "reviews_en": "25,000 reviews", "reviews_ru": "25 000 отзывов"}, {"logo": "⚡", "name": "SiteGround", "cat_en": "Hosting", "cat_ru": "Хостинг", "desc_en": "Premium hosting known for speed and excellent customer support.", "desc_ru": "Премиальный хостинг известный скоростью и отличной поддержкой.", "deal_en": "70% OFF Web Hosting Plans", "deal_ru": "Скидка 70% на планы хостинга", "code": "SG70OFF", "badge": "hot", "badge_en": "Popular", "badge_ru": "Популярный", "url": "https://siteground.com", "stars": "4.8/5", "reviews_en": "14,000 reviews", "reviews_ru": "14 000 отзывов"}, {"logo": "🟠", "name": "Cloudflare", "cat_en": "Security", "cat_ru": "Безопасность", "desc_en": "Free CDN, DDoS protection and DNS. Premium plans for advanced features.", "desc_ru": "Бесплатный CDN, защита от DDoS и DNS. Премиальные планы для расширенных функций.", "deal_en": "Free Plan Available + 20% OFF Pro", "deal_ru": "Бесплатный план + скидка 20% на Pro", "code": "CF20PRO", "badge": "new", "badge_en": "Free Plan", "badge_ru": "Бесплатный план", "url": "https://cloudflare.com", "stars": "4.9/5", "reviews_en": "8,500 reviews", "reviews_ru": "8 500 отзывов"}];
+
+function renderItems() {
+  var l = lang;
+  var grid = document.getElementById('itemsGrid');
+  if (!grid) return;
+  var html = '';
+  for (var i = 0; i < ITEMS.length; i++) {
+    var p = ITEMS[i];
+    var bc = p.badge === 'hot' ? 'badge-hot' : p.badge === 'new' ? 'badge-new' : 'badge-verified';
+    var dealText = l === 'ru' ? p.deal_ru : p.deal_en;
+    var descText = l === 'ru' ? p.desc_ru : p.desc_en;
+    var catText  = l === 'ru' ? p.cat_ru  : p.cat_en;
+    var badgeText= l === 'ru' ? p.badge_ru: p.badge_en;
+    var revText  = l === 'ru' ? p.reviews_ru : p.reviews_en;
+    var btnText  = l === 'ru' ? 'Копировать' : 'Copy &amp; Visit';
+    var visitText= l === 'ru' ? 'На сайт' : 'Visit';
+    html += '<div class="promo-card">';
+    html += '<div class="promo-card-header">';
+    html += '<div class="promo-logo">' + p.logo + '</div>';
+    html += '<div class="promo-info"><h3>' + p.name + '</h3><p>' + catText + '</p></div>';
+    html += '<div class="promo-rating"><div class="promo-stars">' + p.stars + '</div><div class="promo-reviews">' + revText + '</div></div>';
+    html += '</div>';
+    html += '<div class="promo-card-body">';
+    html += '<div class="promo-deal"><div class="promo-deal-title">' + dealText + '</div><div class="promo-deal-desc">' + descText + '</div></div>';
+    html += '<div class="promo-code-wrap"><div class="promo-code" id="code' + i + '">' + p.code + '</div>';
+    html += '<button class="btn-copy" data-code="' + p.code + '" data-url="' + p.url + '" data-idx="' + i + '">' + btnText + '</button></div>';
+    html += '</div>';
+    html += '<div class="promo-card-footer"><span class="promo-badge ' + bc + '">' + badgeText + '</span>';
+    html += '<a href="' + p.url + '" target="_blank" rel="nofollow" class="btn-visit">' + visitText + '</a></div>';
+    html += '</div>';
+  }
+  grid.innerHTML = html;
+  
+  // Attach copy handlers
+  grid.querySelectorAll('.btn-copy').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var code = this.getAttribute('data-code');
+      var url  = this.getAttribute('data-url');
+      var self = this;
+      navigator.clipboard.writeText(code).catch(function(){});
+      var orig = self.textContent;
+      self.textContent = 'Copied!';
+      self.classList.add('copied');
+      setTimeout(function() {
+        window.open(url, '_blank', 'noopener');
+        self.textContent = orig;
+        self.classList.remove('copied');
+      }, 800);
+    });
   });
 }
-document.addEventListener('DOMContentLoaded',function(){
-  document.getElementById('year').textContent=new Date().getFullYear();
-  document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('mobileNav').classList.toggle('open');});
-  window.addEventListener('scroll',function(){
-    var s=window.scrollY,d=document.documentElement.scrollHeight-window.innerHeight;
-    document.getElementById('readProgress').style.width=(d>0?s/d*100:0)+'%';
-    document.getElementById('scrollTop').style.display=s>400?'flex':'none';
+
+function setLang(l) {
+  lang = l;
+  localStorage.setItem('sh_lang', l);
+  document.getElementById('langEN').classList.toggle('active', l === 'en');
+  document.getElementById('langRU').classList.toggle('active', l === 'ru');
+  applyLang(l);
+  renderItems();
+}
+
+function applyLang(l) {
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-en]').forEach(function(el) {
+    var t = el.getAttribute('data-' + l);
+    if (!t) return;
+    if (el.tagName === 'INPUT') { el.placeholder = t; return; }
+    if (t.indexOf('<') !== -1) el.innerHTML = t;
+    else el.textContent = t;
   });
-  if(lang==='ru'){document.getElementById('langRU').classList.add('active');document.getElementById('langEN').classList.remove('active');applyLang('ru');}
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  });
+  window.addEventListener('scroll', function() {
+    var s = window.scrollY, d = document.documentElement.scrollHeight - window.innerHeight;
+    document.getElementById('readProgress').style.width = (d > 0 ? s/d*100 : 0) + '%';
+    document.getElementById('scrollTop').style.display = s > 400 ? 'flex' : 'none';
+  });
+  if (lang === 'ru') {
+    document.getElementById('langRU').classList.add('active');
+    document.getElementById('langEN').classList.remove('active');
+    applyLang('ru');
+  }
   renderItems();
 });
 </script>

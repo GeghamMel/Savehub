@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Best Online Course Promo Codes 2026 | SaveHub</title>
-  <meta name="description" content="Best online course promo codes 2026. Save on Udemy, Coursera, Skillshare, MasterClass and more." />
+  <meta name="description" content="Save on Udemy, Coursera, Skillshare, MasterClass and more. Verified codes updated daily." />
   <link rel="stylesheet" href="style.css" />
   <style>
     .cat-hero { background: linear-gradient(135deg, #7c2d12 0%, #f59e0b 100%); padding: 56px 24px; color: white; text-align: center; }
@@ -18,8 +18,10 @@
     <a href="/" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a>
     <div class="header-search"><input type="text" placeholder="Search deals..." /></div>
     <nav class="header-nav">
-      <a href="vpn.html">VPN</a><a href="software.html">Software</a>
-      <a href="courses.html">Courses</a><a href="blog/">Blog</a>
+      <a href="vpn.html">VPN</a>
+      <a href="software.html">Software</a>
+      <a href="courses.html">Courses</a>
+      <a href="blog/index.html">Blog</a>
     </nav>
     <div class="lang-btns">
       <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
@@ -29,93 +31,146 @@
   </div>
 </header>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="/">Home</a><a href="vpn.html">VPN</a>
-  <a href="software.html">Software</a><a href="courses.html">Courses</a>
-  <a href="streaming.html">Streaming</a><a href="hosting.html">Hosting</a>
+  <a href="/">Home</a>
+  <a href="vpn.html">🔒 VPN</a>
+  <a href="software.html">💻 Software</a>
+  <a href="courses.html">🎓 Courses</a>
+  <a href="streaming.html">🎬 Streaming</a>
+  <a href="hosting.html">☁️ Hosting</a>
 </nav>
+
 <div class="cat-hero">
   <div class="container">
     <h1 data-en="Best Online Course Promo Codes 2026" data-ru="Лучшие промокоды на онлайн курсы 2026">Best Online Course Promo Codes 2026</h1>
-    <p data-en="Save up to 90% on top online courses. Learn new skills for less." data-ru="Экономьте до 90% на лучших онлайн курсах. Учитесь новым навыкам дешевле.">Save up to 90% on top online courses. Learn new skills for less.</p>
+    <p data-en="Save up to 90% on top online learning platforms. Learn new skills for less." data-ru="Экономьте до 90% на лучших платформах. Учитесь новым навыкам дешевле.">Save up to 90% on top online learning platforms. Learn new skills for less.</p>
   </div>
 </div>
+
 <main style="padding:40px 0 80px;">
   <div class="container">
     <div class="promos-grid" id="itemsGrid"></div>
   </div>
 </main>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><a href="/" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a><p>Best promo codes and deals.</p></div>
-      <div class="footer-col"><h4>Categories</h4><a href="vpn.html">VPN</a><a href="software.html">Software</a><a href="courses.html">Courses</a></div>
-      <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div>
+      <div class="footer-brand">
+        <a href="/" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a>
+        <p>Best promo codes and deals updated daily.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="vpn.html">VPN</a>
+        <a href="software.html">Software</a>
+        <a href="courses.html">Courses</a>
+        <a href="streaming.html">Streaming</a>
+        <a href="hosting.html">Hosting</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
     <div class="footer-bottom"><span>&copy; <span id="year"></span> SaveHub.com</span></div>
   </div>
 </footer>
+
 <div id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</div>
 <div id="readProgress"></div>
+
 <script>
-var lang=localStorage.getItem('sh_lang')||'en';
-var ITEMS=ITEMS_JSON;
-function renderItems(){
-  var l=lang;
-  var grid=document.getElementById('itemsGrid');
-  if(!grid)return;
-  grid.innerHTML=ITEMS.map(function(p){
-    var bc=p.badge==='hot'?'badge-hot':p.badge==='new'?'badge-new':'badge-verified';
-    return '<div class="promo-card">'+
-      '<div class="promo-card-header">'+
-        '<div class="promo-logo">'+p.logo+'</div>'+
-        '<div class="promo-info"><h3>'+p.name+'</h3><p>'+(l==='ru'?p.cat_ru:p.cat_en)+'</p></div>'+
-        '<div class="promo-rating"><div class="promo-stars">'+p.stars+'</div><div class="promo-reviews">'+(l==='ru'?p.reviews_ru:p.reviews_en)+'</div></div>'+
-      '</div>'+
-      '<div class="promo-card-body">'+
-        '<div class="promo-deal">'+
-          '<div class="promo-deal-title">'+(l==='ru'?p.deal_ru:p.deal_en)+'</div>'+
-          '<div class="promo-deal-desc">'+(l==='ru'?p.desc_ru:p.desc_en)+'</div>'+
-        '</div>'+
-        '<div class="promo-code-wrap">'+
-          '<div class="promo-code">'+p.code+'</div>'+
-          '<button class="btn-copy" onclick="copyC(''+p.code+'',''+p.url+'',this)">'+(l==='ru'?'Копировать':'Copy & Visit')+'</button>'+
-        '</div>'+
-      '</div>'+
-      '<div class="promo-card-footer">'+
-        '<span class="promo-badge '+bc+'">'+(l==='ru'?p.badge_ru:p.badge_en)+'</span>'+
-        '<a href="'+p.url+'" target="_blank" rel="nofollow" class="btn-visit">'+(l==='ru'?'На сайт':'Visit')+'</a>'+
-      '</div>'+
-    '</div>';
-  }).join('');
-}
-function copyC(code,url,btn){
-  navigator.clipboard.writeText(code).catch(function(){});
-  var o=btn.textContent;btn.textContent='Copied!';btn.classList.add('copied');
-  setTimeout(function(){window.open(url,'_blank','noopener');btn.textContent=o;btn.classList.remove('copied');},800);
-}
-function setLang(l){
-  lang=l;localStorage.setItem('sh_lang',l);
-  document.getElementById('langEN').classList.toggle('active',l==='en');
-  document.getElementById('langRU').classList.toggle('active',l==='ru');
-  applyLang(l);renderItems();
-}
-function applyLang(l){
-  document.documentElement.lang=l;
-  document.querySelectorAll('[data-en]').forEach(function(el){
-    var t=el.getAttribute('data-'+l);if(!t)return;
-    if(el.tagName==='INPUT'){el.placeholder=t;return;}
-    if(t.includes('<'))el.innerHTML=t;else el.textContent=t;
+var lang = localStorage.getItem('sh_lang') || 'en';
+var ITEMS = [{"logo": "🎓", "name": "Udemy", "cat_en": "Courses", "cat_ru": "Курсы", "desc_en": "200,000+ courses on any topic from top instructors worldwide.", "desc_ru": "200 000+ курсов по любой теме от лучших преподавателей.", "deal_en": "Courses from $9.99 — Flash Sale", "deal_ru": "Курсы от $9.99 — Флеш-распродажа", "code": "UDEMY999", "badge": "hot", "badge_en": "Hot Deal", "badge_ru": "Горящее предложение", "url": "https://udemy.com", "stars": "4.5/5", "reviews_en": "45,000 reviews", "reviews_ru": "45 000 отзывов"}, {"logo": "🌐", "name": "Coursera Plus", "cat_en": "Courses", "cat_ru": "Курсы", "desc_en": "Unlimited access to 7,000+ courses from top universities like Yale and Google.", "desc_ru": "Неограниченный доступ к 7000+ курсам от ведущих университетов.", "deal_en": "$100 OFF Annual Coursera Plus", "deal_ru": "Скидка $100 на годовой Coursera Plus", "code": "PLUS100", "badge": "new", "badge_en": "New Deal", "badge_ru": "Новое предложение", "url": "https://coursera.org", "stars": "4.8/5", "reviews_en": "22,000 reviews", "reviews_ru": "22 000 отзывов"}, {"logo": "🎨", "name": "Skillshare", "cat_en": "Creative", "cat_ru": "Творчество", "desc_en": "Unlimited creative classes in design, photography, video and business.", "desc_ru": "Неограниченные творческие классы по дизайну, фотографии, видео и бизнесу.", "deal_en": "40% OFF Premium Membership", "deal_ru": "Скидка 40% на Premium", "code": "SKILL40", "badge": "verified", "badge_en": "Verified", "badge_ru": "Проверен", "url": "https://skillshare.com", "stars": "4.3/5", "reviews_en": "8,500 reviews", "reviews_ru": "8 500 отзывов"}, {"logo": "🎬", "name": "MasterClass", "cat_en": "Courses", "cat_ru": "Курсы", "desc_en": "Learn from the world best — Gordon Ramsay, Serena Williams and more.", "desc_ru": "Учитесь у лучших в мире — Гордон Рамзи, Серена Уильямс.", "deal_en": "Buy 1 Get 1 FREE — Limited offer", "deal_ru": "Купи 1 получи 1 БЕСПЛАТНО", "code": "MASTER2FOR1", "badge": "hot", "badge_en": "BOGO Deal", "badge_ru": "2 по цене 1", "url": "https://masterclass.com", "stars": "4.7/5", "reviews_en": "12,000 reviews", "reviews_ru": "12 000 отзывов"}, {"logo": "💼", "name": "LinkedIn Learning", "cat_en": "Business", "cat_ru": "Бизнес", "desc_en": "Professional courses in business, technology and creative skills. Certificate included.", "desc_ru": "Профессиональные курсы по бизнесу, технологиям и творческим навыкам. С сертификатом.", "deal_en": "1 Month FREE Trial", "deal_ru": "1 месяц БЕСПЛАТНО", "code": "LINKEDIN1MO", "badge": "new", "badge_en": "Free Trial", "badge_ru": "Бесплатный период", "url": "https://linkedin.com/learning", "stars": "4.2/5", "reviews_en": "6,200 reviews", "reviews_ru": "6 200 отзывов"}, {"logo": "💻", "name": "DataCamp", "cat_en": "Tech", "cat_ru": "Технологии", "desc_en": "Learn data science, Python, R and AI from interactive courses.", "desc_ru": "Изучайте Data Science, Python, R и ИИ через интерактивные курсы.", "deal_en": "50% OFF Annual Premium Plan", "deal_ru": "Скидка 50% на годовой Premium", "code": "DATA50", "badge": "verified", "badge_en": "Verified", "badge_ru": "Проверен", "url": "https://datacamp.com", "stars": "4.5/5", "reviews_en": "9,800 reviews", "reviews_ru": "9 800 отзывов"}];
+
+function renderItems() {
+  var l = lang;
+  var grid = document.getElementById('itemsGrid');
+  if (!grid) return;
+  var html = '';
+  for (var i = 0; i < ITEMS.length; i++) {
+    var p = ITEMS[i];
+    var bc = p.badge === 'hot' ? 'badge-hot' : p.badge === 'new' ? 'badge-new' : 'badge-verified';
+    var dealText = l === 'ru' ? p.deal_ru : p.deal_en;
+    var descText = l === 'ru' ? p.desc_ru : p.desc_en;
+    var catText  = l === 'ru' ? p.cat_ru  : p.cat_en;
+    var badgeText= l === 'ru' ? p.badge_ru: p.badge_en;
+    var revText  = l === 'ru' ? p.reviews_ru : p.reviews_en;
+    var btnText  = l === 'ru' ? 'Копировать' : 'Copy &amp; Visit';
+    var visitText= l === 'ru' ? 'На сайт' : 'Visit';
+    html += '<div class="promo-card">';
+    html += '<div class="promo-card-header">';
+    html += '<div class="promo-logo">' + p.logo + '</div>';
+    html += '<div class="promo-info"><h3>' + p.name + '</h3><p>' + catText + '</p></div>';
+    html += '<div class="promo-rating"><div class="promo-stars">' + p.stars + '</div><div class="promo-reviews">' + revText + '</div></div>';
+    html += '</div>';
+    html += '<div class="promo-card-body">';
+    html += '<div class="promo-deal"><div class="promo-deal-title">' + dealText + '</div><div class="promo-deal-desc">' + descText + '</div></div>';
+    html += '<div class="promo-code-wrap"><div class="promo-code" id="code' + i + '">' + p.code + '</div>';
+    html += '<button class="btn-copy" data-code="' + p.code + '" data-url="' + p.url + '" data-idx="' + i + '">' + btnText + '</button></div>';
+    html += '</div>';
+    html += '<div class="promo-card-footer"><span class="promo-badge ' + bc + '">' + badgeText + '</span>';
+    html += '<a href="' + p.url + '" target="_blank" rel="nofollow" class="btn-visit">' + visitText + '</a></div>';
+    html += '</div>';
+  }
+  grid.innerHTML = html;
+  
+  // Attach copy handlers
+  grid.querySelectorAll('.btn-copy').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var code = this.getAttribute('data-code');
+      var url  = this.getAttribute('data-url');
+      var self = this;
+      navigator.clipboard.writeText(code).catch(function(){});
+      var orig = self.textContent;
+      self.textContent = 'Copied!';
+      self.classList.add('copied');
+      setTimeout(function() {
+        window.open(url, '_blank', 'noopener');
+        self.textContent = orig;
+        self.classList.remove('copied');
+      }, 800);
+    });
   });
 }
-document.addEventListener('DOMContentLoaded',function(){
-  document.getElementById('year').textContent=new Date().getFullYear();
-  document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('mobileNav').classList.toggle('open');});
-  window.addEventListener('scroll',function(){
-    var s=window.scrollY,d=document.documentElement.scrollHeight-window.innerHeight;
-    document.getElementById('readProgress').style.width=(d>0?s/d*100:0)+'%';
-    document.getElementById('scrollTop').style.display=s>400?'flex':'none';
+
+function setLang(l) {
+  lang = l;
+  localStorage.setItem('sh_lang', l);
+  document.getElementById('langEN').classList.toggle('active', l === 'en');
+  document.getElementById('langRU').classList.toggle('active', l === 'ru');
+  applyLang(l);
+  renderItems();
+}
+
+function applyLang(l) {
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-en]').forEach(function(el) {
+    var t = el.getAttribute('data-' + l);
+    if (!t) return;
+    if (el.tagName === 'INPUT') { el.placeholder = t; return; }
+    if (t.indexOf('<') !== -1) el.innerHTML = t;
+    else el.textContent = t;
   });
-  if(lang==='ru'){document.getElementById('langRU').classList.add('active');document.getElementById('langEN').classList.remove('active');applyLang('ru');}
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  });
+  window.addEventListener('scroll', function() {
+    var s = window.scrollY, d = document.documentElement.scrollHeight - window.innerHeight;
+    document.getElementById('readProgress').style.width = (d > 0 ? s/d*100 : 0) + '%';
+    document.getElementById('scrollTop').style.display = s > 400 ? 'flex' : 'none';
+  });
+  if (lang === 'ru') {
+    document.getElementById('langRU').classList.add('active');
+    document.getElementById('langEN').classList.remove('active');
+    applyLang('ru');
+  }
   renderItems();
 });
 </script>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Best Streaming Promo Codes & Deals 2026 | SaveHub</title>
-  <meta name="description" content="Best streaming service promo codes 2026. Save on Spotify, Disney+, YouTube Premium and more." />
+  <title>Best Streaming Promo Codes 2026 | SaveHub</title>
+  <meta name="description" content="Save on Spotify, Disney+, YouTube Premium, Hulu and more streaming services." />
   <link rel="stylesheet" href="style.css" />
   <style>
     .cat-hero { background: linear-gradient(135deg, #1a1a2e 0%, #e50914 100%); padding: 56px 24px; color: white; text-align: center; }
@@ -18,8 +18,10 @@
     <a href="/" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a>
     <div class="header-search"><input type="text" placeholder="Search deals..." /></div>
     <nav class="header-nav">
-      <a href="vpn.html">VPN</a><a href="software.html">Software</a>
-      <a href="courses.html">Courses</a><a href="blog/">Blog</a>
+      <a href="vpn.html">VPN</a>
+      <a href="software.html">Software</a>
+      <a href="courses.html">Courses</a>
+      <a href="blog/index.html">Blog</a>
     </nav>
     <div class="lang-btns">
       <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
@@ -29,93 +31,146 @@
   </div>
 </header>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="/">Home</a><a href="vpn.html">VPN</a>
-  <a href="software.html">Software</a><a href="courses.html">Courses</a>
-  <a href="streaming.html">Streaming</a><a href="hosting.html">Hosting</a>
+  <a href="/">Home</a>
+  <a href="vpn.html">🔒 VPN</a>
+  <a href="software.html">💻 Software</a>
+  <a href="courses.html">🎓 Courses</a>
+  <a href="streaming.html">🎬 Streaming</a>
+  <a href="hosting.html">☁️ Hosting</a>
 </nav>
+
 <div class="cat-hero">
   <div class="container">
     <h1 data-en="Best Streaming Promo Codes 2026" data-ru="Лучшие промокоды на стриминг 2026">Best Streaming Promo Codes 2026</h1>
     <p data-en="Save on Spotify, Disney+, YouTube Premium and more streaming services." data-ru="Экономьте на Spotify, Disney+, YouTube Premium и других стриминговых сервисах.">Save on Spotify, Disney+, YouTube Premium and more streaming services.</p>
   </div>
 </div>
+
 <main style="padding:40px 0 80px;">
   <div class="container">
     <div class="promos-grid" id="itemsGrid"></div>
   </div>
 </main>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><a href="/" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a><p>Best promo codes and deals.</p></div>
-      <div class="footer-col"><h4>Categories</h4><a href="vpn.html">VPN</a><a href="software.html">Software</a><a href="courses.html">Courses</a></div>
-      <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div>
+      <div class="footer-brand">
+        <a href="/" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a>
+        <p>Best promo codes and deals updated daily.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="vpn.html">VPN</a>
+        <a href="software.html">Software</a>
+        <a href="courses.html">Courses</a>
+        <a href="streaming.html">Streaming</a>
+        <a href="hosting.html">Hosting</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
     <div class="footer-bottom"><span>&copy; <span id="year"></span> SaveHub.com</span></div>
   </div>
 </footer>
+
 <div id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</div>
 <div id="readProgress"></div>
+
 <script>
-var lang=localStorage.getItem('sh_lang')||'en';
-var ITEMS=ITEMS_JSON;
-function renderItems(){
-  var l=lang;
-  var grid=document.getElementById('itemsGrid');
-  if(!grid)return;
-  grid.innerHTML=ITEMS.map(function(p){
-    var bc=p.badge==='hot'?'badge-hot':p.badge==='new'?'badge-new':'badge-verified';
-    return '<div class="promo-card">'+
-      '<div class="promo-card-header">'+
-        '<div class="promo-logo">'+p.logo+'</div>'+
-        '<div class="promo-info"><h3>'+p.name+'</h3><p>'+(l==='ru'?p.cat_ru:p.cat_en)+'</p></div>'+
-        '<div class="promo-rating"><div class="promo-stars">'+p.stars+'</div><div class="promo-reviews">'+(l==='ru'?p.reviews_ru:p.reviews_en)+'</div></div>'+
-      '</div>'+
-      '<div class="promo-card-body">'+
-        '<div class="promo-deal">'+
-          '<div class="promo-deal-title">'+(l==='ru'?p.deal_ru:p.deal_en)+'</div>'+
-          '<div class="promo-deal-desc">'+(l==='ru'?p.desc_ru:p.desc_en)+'</div>'+
-        '</div>'+
-        '<div class="promo-code-wrap">'+
-          '<div class="promo-code">'+p.code+'</div>'+
-          '<button class="btn-copy" onclick="copyC(''+p.code+'',''+p.url+'',this)">'+(l==='ru'?'Копировать':'Copy & Visit')+'</button>'+
-        '</div>'+
-      '</div>'+
-      '<div class="promo-card-footer">'+
-        '<span class="promo-badge '+bc+'">'+(l==='ru'?p.badge_ru:p.badge_en)+'</span>'+
-        '<a href="'+p.url+'" target="_blank" rel="nofollow" class="btn-visit">'+(l==='ru'?'На сайт':'Visit')+'</a>'+
-      '</div>'+
-    '</div>';
-  }).join('');
-}
-function copyC(code,url,btn){
-  navigator.clipboard.writeText(code).catch(function(){});
-  var o=btn.textContent;btn.textContent='Copied!';btn.classList.add('copied');
-  setTimeout(function(){window.open(url,'_blank','noopener');btn.textContent=o;btn.classList.remove('copied');},800);
-}
-function setLang(l){
-  lang=l;localStorage.setItem('sh_lang',l);
-  document.getElementById('langEN').classList.toggle('active',l==='en');
-  document.getElementById('langRU').classList.toggle('active',l==='ru');
-  applyLang(l);renderItems();
-}
-function applyLang(l){
-  document.documentElement.lang=l;
-  document.querySelectorAll('[data-en]').forEach(function(el){
-    var t=el.getAttribute('data-'+l);if(!t)return;
-    if(el.tagName==='INPUT'){el.placeholder=t;return;}
-    if(t.includes('<'))el.innerHTML=t;else el.textContent=t;
+var lang = localStorage.getItem('sh_lang') || 'en';
+var ITEMS = [{"logo": "🎵", "name": "Spotify Premium", "cat_en": "Music", "cat_ru": "Музыка", "desc_en": "Ad-free music, offline downloads, unlimited skips. 100M+ songs.", "desc_ru": "Музыка без рекламы, скачивание, неограниченные пропуски. 100M+ треков.", "deal_en": "3 Months Premium for $0.99", "deal_ru": "3 месяца Premium за $0.99", "code": "SPOT099", "badge": "hot", "badge_en": "Best Deal", "badge_ru": "Лучшая цена", "url": "https://spotify.com", "stars": "4.8/5", "reviews_en": "85,000 reviews", "reviews_ru": "85 000 отзывов"}, {"logo": "🏰", "name": "Disney+", "cat_en": "Streaming", "cat_ru": "Стриминг", "desc_en": "Disney, Marvel, Star Wars, Pixar and National Geographic all in one place.", "desc_ru": "Disney, Marvel, Звёздные войны, Pixar и National Geographic в одном месте.", "deal_en": "Save 20% on Annual Plan", "deal_ru": "Скидка 20% на годовой план", "code": "DISNEY20", "badge": "new", "badge_en": "New Deal", "badge_ru": "Новое предложение", "url": "https://disneyplus.com", "stars": "4.5/5", "reviews_en": "28,000 reviews", "reviews_ru": "28 000 отзывов"}, {"logo": "▶️", "name": "YouTube Premium", "cat_en": "Video", "cat_ru": "Видео", "desc_en": "Ad-free YouTube, background play, YouTube Music included. Watch offline.", "desc_ru": "YouTube без рекламы, фоновое воспроизведение, YouTube Music в комплекте.", "deal_en": "2 Months FREE Trial", "deal_ru": "2 месяца БЕСПЛАТНО", "code": "YT2FREE", "badge": "verified", "badge_en": "Verified", "badge_ru": "Проверен", "url": "https://youtube.com/premium", "stars": "4.6/5", "reviews_en": "15,000 reviews", "reviews_ru": "15 000 отзывов"}, {"logo": "📺", "name": "Hulu", "cat_en": "Streaming", "cat_ru": "Стриминг", "desc_en": "Movies, TV shows, live sports and news. Best entertainment in one place.", "desc_ru": "Фильмы, сериалы, прямые спортивные трансляции и новости.", "deal_en": "$0.99/month for 3 months", "deal_ru": "$0.99/месяц на 3 месяца", "code": "HULU099", "badge": "hot", "badge_en": "Flash Sale", "badge_ru": "Флеш-распродажа", "url": "https://hulu.com", "stars": "4.3/5", "reviews_en": "22,000 reviews", "reviews_ru": "22 000 отзывов"}, {"logo": "🍎", "name": "Apple TV+", "cat_en": "Streaming", "cat_ru": "Стриминг", "desc_en": "Award-winning Apple Originals. New shows and movies every month.", "desc_ru": "Удостоенные наград Apple Originals. Новые шоу и фильмы каждый месяц.", "deal_en": "7-Day FREE Trial", "deal_ru": "7 дней БЕСПЛАТНО", "code": "APPLETV7", "badge": "new", "badge_en": "Free Trial", "badge_ru": "Бесплатный период", "url": "https://tv.apple.com", "stars": "4.4/5", "reviews_en": "10,000 reviews", "reviews_ru": "10 000 отзывов"}];
+
+function renderItems() {
+  var l = lang;
+  var grid = document.getElementById('itemsGrid');
+  if (!grid) return;
+  var html = '';
+  for (var i = 0; i < ITEMS.length; i++) {
+    var p = ITEMS[i];
+    var bc = p.badge === 'hot' ? 'badge-hot' : p.badge === 'new' ? 'badge-new' : 'badge-verified';
+    var dealText = l === 'ru' ? p.deal_ru : p.deal_en;
+    var descText = l === 'ru' ? p.desc_ru : p.desc_en;
+    var catText  = l === 'ru' ? p.cat_ru  : p.cat_en;
+    var badgeText= l === 'ru' ? p.badge_ru: p.badge_en;
+    var revText  = l === 'ru' ? p.reviews_ru : p.reviews_en;
+    var btnText  = l === 'ru' ? 'Копировать' : 'Copy &amp; Visit';
+    var visitText= l === 'ru' ? 'На сайт' : 'Visit';
+    html += '<div class="promo-card">';
+    html += '<div class="promo-card-header">';
+    html += '<div class="promo-logo">' + p.logo + '</div>';
+    html += '<div class="promo-info"><h3>' + p.name + '</h3><p>' + catText + '</p></div>';
+    html += '<div class="promo-rating"><div class="promo-stars">' + p.stars + '</div><div class="promo-reviews">' + revText + '</div></div>';
+    html += '</div>';
+    html += '<div class="promo-card-body">';
+    html += '<div class="promo-deal"><div class="promo-deal-title">' + dealText + '</div><div class="promo-deal-desc">' + descText + '</div></div>';
+    html += '<div class="promo-code-wrap"><div class="promo-code" id="code' + i + '">' + p.code + '</div>';
+    html += '<button class="btn-copy" data-code="' + p.code + '" data-url="' + p.url + '" data-idx="' + i + '">' + btnText + '</button></div>';
+    html += '</div>';
+    html += '<div class="promo-card-footer"><span class="promo-badge ' + bc + '">' + badgeText + '</span>';
+    html += '<a href="' + p.url + '" target="_blank" rel="nofollow" class="btn-visit">' + visitText + '</a></div>';
+    html += '</div>';
+  }
+  grid.innerHTML = html;
+  
+  // Attach copy handlers
+  grid.querySelectorAll('.btn-copy').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var code = this.getAttribute('data-code');
+      var url  = this.getAttribute('data-url');
+      var self = this;
+      navigator.clipboard.writeText(code).catch(function(){});
+      var orig = self.textContent;
+      self.textContent = 'Copied!';
+      self.classList.add('copied');
+      setTimeout(function() {
+        window.open(url, '_blank', 'noopener');
+        self.textContent = orig;
+        self.classList.remove('copied');
+      }, 800);
+    });
   });
 }
-document.addEventListener('DOMContentLoaded',function(){
-  document.getElementById('year').textContent=new Date().getFullYear();
-  document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('mobileNav').classList.toggle('open');});
-  window.addEventListener('scroll',function(){
-    var s=window.scrollY,d=document.documentElement.scrollHeight-window.innerHeight;
-    document.getElementById('readProgress').style.width=(d>0?s/d*100:0)+'%';
-    document.getElementById('scrollTop').style.display=s>400?'flex':'none';
+
+function setLang(l) {
+  lang = l;
+  localStorage.setItem('sh_lang', l);
+  document.getElementById('langEN').classList.toggle('active', l === 'en');
+  document.getElementById('langRU').classList.toggle('active', l === 'ru');
+  applyLang(l);
+  renderItems();
+}
+
+function applyLang(l) {
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-en]').forEach(function(el) {
+    var t = el.getAttribute('data-' + l);
+    if (!t) return;
+    if (el.tagName === 'INPUT') { el.placeholder = t; return; }
+    if (t.indexOf('<') !== -1) el.innerHTML = t;
+    else el.textContent = t;
   });
-  if(lang==='ru'){document.getElementById('langRU').classList.add('active');document.getElementById('langEN').classList.remove('active');applyLang('ru');}
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  });
+  window.addEventListener('scroll', function() {
+    var s = window.scrollY, d = document.documentElement.scrollHeight - window.innerHeight;
+    document.getElementById('readProgress').style.width = (d > 0 ? s/d*100 : 0) + '%';
+    document.getElementById('scrollTop').style.display = s > 400 ? 'flex' : 'none';
+  });
+  if (lang === 'ru') {
+    document.getElementById('langRU').classList.add('active');
+    document.getElementById('langEN').classList.remove('active');
+    applyLang('ru');
+  }
   renderItems();
 });
 </script>
