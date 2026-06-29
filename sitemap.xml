@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- English pages -->
+  <url><loc>https://savehub.com/</loc><priority>1.0</priority><changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://savehub.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://savehub.com/ru/"/>
+  </url>
+  <url><loc>https://savehub.com/vpn.html</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://savehub.com/software.html</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://savehub.com/courses.html</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://savehub.com/streaming.html</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://savehub.com/hosting.html</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://savehub.com/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://savehub.com/contact.html</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://savehub.com/privacy.html</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+
+  <!-- English blog -->
+  <url><loc>https://savehub.com/blog/</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://savehub.com/blog/best-vpn-2026.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://savehub.com/blog/nordvpn-review.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://savehub.com/blog/how-to-save-on-software.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://savehub.com/blog/best-udemy-coupons.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://savehub.com/blog/grammarly-promo-code.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Russian pages -->
+  <url><loc>https://savehub.com/ru/</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://savehub.com/ru/vpn.html</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://savehub.com/ru/software.html</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://savehub.com/ru/courses.html</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://savehub.com/ru/streaming.html</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://savehub.com/ru/hosting.html</loc><priority>0.9</priority><changefreq>daily</changefreq></url>
+  <url><loc>https://savehub.com/ru/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://savehub.com/ru/contact.html</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://savehub.com/ru/privacy.html</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+
+  <!-- Russian blog -->
+  <url><loc>https://savehub.com/ru/blog/</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://savehub.com/ru/blog/luchshie-vpn-2026.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://savehub.com/ru/blog/obzor-nordvpn-2026.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://savehub.com/ru/blog/kak-sekonomit-na-programmah.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://savehub.com/ru/blog/promokody-udemy-2026.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://savehub.com/ru/blog/promokod-grammarly-2026.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+</urlset>
