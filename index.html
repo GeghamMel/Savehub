@@ -28,7 +28,7 @@
       SaveHub
     </a>
     <div class="header-search">
-      <input type="text" id="headerSearch" placeholder="Search promo codes..." onkeydown="if(event.key==='Enter')doSearch(this.value)" />
+      <input type="text" id="headerSearchInput" placeholder="Search deals..." data-en="Search deals..." data-ru="Поиск скидок..." onkeydown="if(event.key==='Enter')window.location.href='search.html?q='+encodeURIComponent(this.value)" />
     </div>
     <nav class="header-nav">
       <a href="vpn.html" data-en="VPN" data-ru="VPN">VPN</a>
