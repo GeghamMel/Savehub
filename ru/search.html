@@ -148,7 +148,7 @@ var ITEMS = [
   {c:'software',i:'📊',n:'Microsoft 365',d:'Экономия $20 на год',dd:'Word, Excel, PowerPoint.',code:'MS365SAVE',url:'software.html',t:'microsoft office word excel'},
   {c:'software',i:'🖌️',n:'Adobe Creative Cloud',d:'Скидка 30% на первый год',dd:'Photoshop, Illustrator и другое.',code:'ADOBE30',url:'software.html',t:'adobe photoshop дизайн'},
   {c:'software',i:'📝',n:'Notion',d:'Скидка 20% на Plus',dd:'Заметки, задачи, базы данных.',code:'NOTION20',url:'software.html',t:'notion заметки продуктивность'},
-  {c:'courses',i:'🎓',n:'Udemy',d:'Курсы от $9.99',dd:'200 000+ курсов по любой теме.',code:'UDEMY999',url:'courses.html',t:'udemy курсы обучение'},
+  {c:'courses',i:'🎓',n:'Udemy',d:'Курсы от $9.99',dd:'200 000+ курсов по любой теме.',code:'',url:'courses.html',t:'udemy курсы обучение'},
   {c:'courses',i:'🌐',n:'Coursera Plus',d:'Скидка $100 на год',dd:'7 000+ курсов от университетов.',code:'PLUS100',url:'courses.html',t:'coursera университет курсы'},
   {c:'courses',i:'🎨',n:'Skillshare',d:'Скидка 40% на Premium',dd:'Неограниченные творческие классы.',code:'SKILL40',url:'courses.html',t:'skillshare творчество дизайн'},
   {c:'courses',i:'🎬',n:'MasterClass',d:'Купи 1 получи 1 БЕСПЛАТНО',dd:'Учитесь у лучших в мире.',code:'MASTER2FOR1',url:'courses.html',t:'masterclass курсы'},
@@ -216,7 +216,7 @@ function render() {
         '<div class="res-title">' + item.n + ' — ' + item.d + '</div>' +
         '<div class="res-desc">' + item.dd + '</div>' +
       '</div>' +
-      '<div class="res-code">' + item.code + '</div>' +
+      (item.code ? '<div class="res-code">' + item.code + '</div>' : '') +
     '</a>';
   }).join('');
 }

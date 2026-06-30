@@ -227,7 +227,7 @@ var PROMOS = [
   {logo:'🔒',name:'NordVPN',cat:'VPN',desc:'Лучший VPN в мире — серверы в 111 странах, двойное шифрование.',deal:'Скидка 68% + 3 месяца БЕСПЛАТНО',code:'SAVEHUB68',badge:'hot',badge_text:'🔥 Горящая скидка',url:'https://nordvpn.com',stars:'★★★★★',reviews:'12 450 отзывов'},
   {logo:'🌊',name:'Surfshark',cat:'VPN',desc:'Лучшее соотношение цена-качество — неограниченные устройства.',deal:'Скидка 83% — всего $2.30/месяц',code:'SURF83',badge:'hot',badge_text:'🔥 Лучшая цена',url:'https://surfshark.com',stars:'★★★★½',reviews:'6 100 отзывов'},
   {logo:'✍️',name:'Grammarly Premium',cat:'Программы',desc:'ИИ-помощник для письма — грамматика, стиль, тон и плагиат.',deal:'Скидка 20% на годовой Premium',code:'GRAM20',badge:'new',badge_text:'✨ Новое',url:'https://grammarly.com',stars:'★★★★★',reviews:'25 000 отзывов'},
-  {logo:'🎓',name:'Udemy',cat:'Курсы',desc:'200 000+ курсов по любой теме от лучших преподавателей.',deal:'Курсы от $9.99 — Флеш-распродажа',code:'UDEMY999',badge:'hot',badge_text:'🔥 Флеш-распродажа',url:'https://trk.udemy.com/c/7446694/3954687/39854',stars:'★★★★½',reviews:'45 000 отзывов'},
+  {logo:'🎓',name:'Udemy',cat:'Курсы',desc:'200 000+ курсов по любой теме от лучших преподавателей.',deal:'Курсы от $9.99 — Флеш-распродажа',code:'',badge:'hot',badge_text:'🔥 Флеш-распродажа',url:'https://trk.udemy.com/c/7446694/3954687/39854',stars:'★★★★½',reviews:'45 000 отзывов'},
   {logo:'🎵',name:'Spotify Premium',cat:'Музыка',desc:'Музыка без рекламы, скачивание, 100M+ треков.',deal:'3 месяца Premium за $0.99',code:'SPOT099',badge:'hot',badge_text:'🔥 Лучшая цена',url:'https://spotify.com',stars:'★★★★★',reviews:'85 000 отзывов'},
   {logo:'🌐',name:'Hostinger',cat:'Хостинг',desc:'Самый доступный хостинг. От $1.99/месяц.',deal:'Скидка 82% + бесплатный домен',code:'HOSTINGER82',badge:'hot',badge_text:'🔥 Лучшая цена',url:'https://hostinger.com',stars:'★★★★½',reviews:'32 000 отзывов'},
 ];
@@ -245,8 +245,12 @@ function renderPromos() {
     html += '<div class="promo-rating"><div class="promo-stars">' + p.stars + '</div><div class="promo-reviews">' + p.reviews + '</div></div></div>';
     html += '<div class="promo-card-body"><div class="promo-deal"><div class="promo-deal-title">' + p.deal + '</div>';
     html += '<div class="promo-deal-desc">' + p.desc + '</div></div>';
-    html += '<div class="promo-code-wrap"><div class="promo-code">' + p.code + '</div>';
-    html += '<button class="btn-copy" data-code="' + p.code + '" data-url="' + p.url + '">Копировать</button></div></div>';
+    if (p.code) {
+      html += '<div class="promo-code-wrap"><div class="promo-code">' + p.code + '</div>';
+      html += '<button class="btn-copy" data-code="' + p.code + '" data-url="' + p.url + '">Копировать</button></div></div>';
+    } else {
+      html += '<a href="' + p.url + '" target="_blank" rel="nofollow" class="btn-copy" style="display:block;text-align:center;text-decoration:none;">Перейти на сайт →</a></div>';
+    }
     html += '<div class="promo-card-footer"><span class="promo-badge ' + bc + '">' + p.badge_text + '</span>';
     html += '<a href="' + p.url + '" target="_blank" rel="nofollow" class="btn-visit">На сайт →</a></div></div>';
   }
