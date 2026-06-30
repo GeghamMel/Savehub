@@ -94,7 +94,7 @@
 <div id="readProgress"></div>
 
 <script>
-var lang = localStorage.getItem('sh_lang') || 'en';
+var lang = 'en';
 var ITEMS = [{"logo": "🎵", "name": "Spotify Premium", "cat_en": "Music", "cat_ru": "Музыка", "desc_en": "Ad-free music, offline downloads, unlimited skips. 100M+ songs.", "desc_ru": "Музыка без рекламы, скачивание, неограниченные пропуски. 100M+ треков.", "deal_en": "3 Months Premium for $0.99", "deal_ru": "3 месяца Premium за $0.99", "code": "SPOT099", "badge": "hot", "badge_en": "Best Deal", "badge_ru": "Лучшая цена", "url": "https://spotify.com", "stars": "4.8/5", "reviews_en": "85,000 reviews", "reviews_ru": "85 000 отзывов"}, {"logo": "🏰", "name": "Disney+", "cat_en": "Streaming", "cat_ru": "Стриминг", "desc_en": "Disney, Marvel, Star Wars, Pixar and National Geographic all in one place.", "desc_ru": "Disney, Marvel, Звёздные войны, Pixar и National Geographic в одном месте.", "deal_en": "Save 20% on Annual Plan", "deal_ru": "Скидка 20% на годовой план", "code": "DISNEY20", "badge": "new", "badge_en": "New Deal", "badge_ru": "Новое предложение", "url": "https://disneyplus.com", "stars": "4.5/5", "reviews_en": "28,000 reviews", "reviews_ru": "28 000 отзывов"}, {"logo": "▶️", "name": "YouTube Premium", "cat_en": "Video", "cat_ru": "Видео", "desc_en": "Ad-free YouTube, background play, YouTube Music included. Watch offline.", "desc_ru": "YouTube без рекламы, фоновое воспроизведение, YouTube Music в комплекте.", "deal_en": "2 Months FREE Trial", "deal_ru": "2 месяца БЕСПЛАТНО", "code": "YT2FREE", "badge": "verified", "badge_en": "Verified", "badge_ru": "Проверен", "url": "https://youtube.com/premium", "stars": "4.6/5", "reviews_en": "15,000 reviews", "reviews_ru": "15 000 отзывов"}, {"logo": "📺", "name": "Hulu", "cat_en": "Streaming", "cat_ru": "Стриминг", "desc_en": "Movies, TV shows, live sports and news. Best entertainment in one place.", "desc_ru": "Фильмы, сериалы, прямые спортивные трансляции и новости.", "deal_en": "$0.99/month for 3 months", "deal_ru": "$0.99/месяц на 3 месяца", "code": "HULU099", "badge": "hot", "badge_en": "Flash Sale", "badge_ru": "Флеш-распродажа", "url": "https://hulu.com", "stars": "4.3/5", "reviews_en": "22,000 reviews", "reviews_ru": "22 000 отзывов"}, {"logo": "🍎", "name": "Apple TV+", "cat_en": "Streaming", "cat_ru": "Стриминг", "desc_en": "Award-winning Apple Originals. New shows and movies every month.", "desc_ru": "Удостоенные наград Apple Originals. Новые шоу и фильмы каждый месяц.", "deal_en": "7-Day FREE Trial", "deal_ru": "7 дней БЕСПЛАТНО", "code": "APPLETV7", "badge": "new", "badge_en": "Free Trial", "badge_ru": "Бесплатный период", "url": "https://tv.apple.com", "stars": "4.4/5", "reviews_en": "10,000 reviews", "reviews_ru": "10 000 отзывов"}];
 
 function renderItems() {
@@ -178,11 +178,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('readProgress').style.width = (d > 0 ? s/d*100 : 0) + '%';
     document.getElementById('scrollTop').style.display = s > 400 ? 'flex' : 'none';
   });
-  if (lang === 'ru') {
-    document.getElementById('langRU').classList.add('active');
-    document.getElementById('langEN').classList.remove('active');
-    applyLang('ru');
-  }
   renderItems();
 });
 </script>

@@ -94,7 +94,7 @@
 <div id="readProgress"></div>
 
 <script>
-var lang = localStorage.getItem('sh_lang') || 'en';
+var lang = 'en';
 var ITEMS = [{"logo": "🌐", "name": "Hostinger", "cat_en": "Hosting", "cat_ru": "Хостинг", "desc_en": "Most affordable web hosting with great performance. From $1.99/month.", "desc_ru": "Самый доступный хостинг с отличной производительностью. От $1.99/месяц.", "deal_en": "82% OFF + Free Domain", "deal_ru": "Скидка 82% + бесплатный домен", "code": "HOSTINGER82", "badge": "hot", "badge_en": "Best Value", "badge_ru": "Лучшая цена", "url": "https://hostinger.com", "stars": "4.6/5", "reviews_en": "32,000 reviews", "reviews_ru": "32 000 отзывов"}, {"logo": "🏷️", "name": "Namecheap", "cat_en": "Domains", "cat_ru": "Домены", "desc_en": "Cheap domain registration + reliable hosting. .com domains from $5.98/year.", "desc_ru": "Дешёвая регистрация доменов + надёжный хостинг. Домены .com от $5.98/год.", "deal_en": ".com Domain for $5.98/year", "deal_ru": "Домен .com за $5.98/год", "code": "CHEAP598", "badge": "verified", "badge_en": "Verified", "badge_ru": "Проверен", "url": "https://namecheap.com", "stars": "4.7/5", "reviews_en": "18,000 reviews", "reviews_ru": "18 000 отзывов"}, {"logo": "🔵", "name": "Bluehost", "cat_en": "Hosting", "cat_ru": "Хостинг", "desc_en": "WordPress recommended hosting. Easy setup, 24/7 support, free SSL.", "desc_ru": "Хостинг рекомендованный WordPress. Простая настройка, поддержка 24/7.", "deal_en": "65% OFF + Free Domain for 1 Year", "deal_ru": "Скидка 65% + бесплатный домен на год", "code": "BLUE65", "badge": "new", "badge_en": "New Deal", "badge_ru": "Новое предложение", "url": "https://bluehost.com", "stars": "4.3/5", "reviews_en": "25,000 reviews", "reviews_ru": "25 000 отзывов"}, {"logo": "⚡", "name": "SiteGround", "cat_en": "Hosting", "cat_ru": "Хостинг", "desc_en": "Premium hosting known for speed and excellent customer support.", "desc_ru": "Премиальный хостинг известный скоростью и отличной поддержкой.", "deal_en": "70% OFF Web Hosting Plans", "deal_ru": "Скидка 70% на планы хостинга", "code": "SG70OFF", "badge": "hot", "badge_en": "Popular", "badge_ru": "Популярный", "url": "https://siteground.com", "stars": "4.8/5", "reviews_en": "14,000 reviews", "reviews_ru": "14 000 отзывов"}, {"logo": "🟠", "name": "Cloudflare", "cat_en": "Security", "cat_ru": "Безопасность", "desc_en": "Free CDN, DDoS protection and DNS. Premium plans for advanced features.", "desc_ru": "Бесплатный CDN, защита от DDoS и DNS. Премиальные планы для расширенных функций.", "deal_en": "Free Plan Available + 20% OFF Pro", "deal_ru": "Бесплатный план + скидка 20% на Pro", "code": "CF20PRO", "badge": "new", "badge_en": "Free Plan", "badge_ru": "Бесплатный план", "url": "https://cloudflare.com", "stars": "4.9/5", "reviews_en": "8,500 reviews", "reviews_ru": "8 500 отзывов"}];
 
 function renderItems() {
@@ -178,11 +178,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('readProgress').style.width = (d > 0 ? s/d*100 : 0) + '%';
     document.getElementById('scrollTop').style.display = s > 400 ? 'flex' : 'none';
   });
-  if (lang === 'ru') {
-    document.getElementById('langRU').classList.add('active');
-    document.getElementById('langEN').classList.remove('active');
-    applyLang('ru');
-  }
   renderItems();
 });
 </script>

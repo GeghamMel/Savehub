@@ -114,7 +114,7 @@
 <div id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
 <div id="readProgress"></div>
 <script>
-var lang=localStorage.getItem('sh_lang')||'en';
+var lang = 'en';
 document.getElementById('year').textContent=new Date().getFullYear();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('mobileNav').classList.toggle('open');});
 window.addEventListener('scroll',function(){var s=window.scrollY,d=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('readProgress').style.width=(d>0?s/d*100:0)+'%';document.getElementById('scrollTop').style.display=s>400?'flex':'none';});

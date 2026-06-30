@@ -116,7 +116,7 @@
 <div id="readProgress"></div>
 
 <script>
-var lang = localStorage.getItem('sh_lang') || 'en';
+var lang = 'en';
 var cat = 'all';
 
 var ITEMS = [
@@ -270,12 +270,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var params = new URLSearchParams(window.location.search);
   if (params.get('q')) {
     document.getElementById('q').value = params.get('q');
-  }
-
-  if (lang === 'ru') {
-    document.getElementById('langRU').classList.add('active');
-    document.getElementById('langEN').classList.remove('active');
-    applyLang('ru');
   }
 
   render();

@@ -73,7 +73,7 @@
 <div id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
 <div id="readProgress"></div>
 <script>
-var lang = localStorage.getItem('sh_lang') || 'en';
+var lang = 'en';
 var SOFTWARE = [
   {logo:'✍️',name:'Grammarly Premium',cat_en:'Writing',cat_ru:'Письмо',desc_en:'AI-powered writing assistant — grammar, style, tone and plagiarism checker.',desc_ru:'ИИ-помощник для письма — грамматика, стиль, тон и проверка на плагиат.',deal_en:'Save 20% on Premium Annual Plan',deal_ru:'Скидка 20% на годовой Premium',code:'GRAM20',badge:'new',badge_en:'✨ New',badge_ru:'✨ Новый',url:'https://grammarly.com',stars:'★★★★★',reviews_en:'25,000 reviews',reviews_ru:'25 000 отзывов'},
   {logo:'🎨',name:'Canva Pro',cat_en:'Design',cat_ru:'Дизайн',desc_en:'Professional design platform with 100M+ templates. Create anything visually stunning.',desc_ru:'Профессиональная дизайн-платформа с 100M+ шаблонами. Создавайте визуально впечатляющий контент.',deal_en:'30% OFF Annual Plan',deal_ru:'Скидка 30% на годовой план',code:'CANVA30',badge:'verified',badge_en:'✓ Verified',badge_ru:'✓ Проверен',url:'https://canva.com',stars:'★★★★★',reviews_en:'18,500 reviews',reviews_ru:'18 500 отзывов'},
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded',function(){
   document.getElementById('year').textContent=new Date().getFullYear();
   document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('mobileNav').classList.toggle('open');});
   window.addEventListener('scroll',function(){var s=window.scrollY,d=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('readProgress').style.width=(d>0?s/d*100:0)+'%';document.getElementById('scrollTop').style.display=s>400?'flex':'none';});
-  if(lang==='ru'){document.getElementById('langRU').classList.add('active');document.getElementById('langEN').classList.remove('active');applyLang('ru');}
+  
   renderSoftware();
 });
 </script>

@@ -56,13 +56,13 @@
 </footer>
 <div id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</div>
 <script>
-var lang=localStorage.getItem('sh_lang')||'en';
+var lang = 'en';
 document.getElementById('year').textContent=new Date().getFullYear();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('mobileNav').classList.toggle('open');});
 function setLang(l){lang=l;localStorage.setItem('sh_lang',l);document.getElementById('langEN').classList.toggle('active',l==='en');document.getElementById('langRU').classList.toggle('active',l==='ru');document.querySelectorAll('[data-en]').forEach(function(el){var t=el.getAttribute('data-'+l);if(t)el.innerHTML=t;
   applyLang(l);
 });}
 function applyLang(l){document.documentElement.lang=l;document.querySelectorAll('[data-en]').forEach(function(el){var t=el.getAttribute('data-'+l);if(t)el.innerHTML=t;});}
-if(lang==='ru'){document.getElementById('langRU').classList.add('active');document.getElementById('langEN').classList.remove('active');applyLang('ru');}
+
 </script>
 </body></html>
