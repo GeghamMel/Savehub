@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Поиск промокодов | SaveHub</title>
-  <meta name="description" content="Search all promo codes on SaveHub." />
+  <meta name="description" content="Поиск промокодов на SaveHub — VPN, программы, курсы, стриминг, покупки, игры и путешествия." />
   <link rel="stylesheet" href="../style.css" />
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2YT93PPE0"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C2YT93PPE0');</script>
   <style>
@@ -41,38 +40,43 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a>
+    <div class="header-search">
+      <input type="text" placeholder="Поиск промокодов..." onkeydown="if(event.key==='Enter')doSearch()" />
+    </div>
     <nav class="header-nav">
-      <a href="../ru/vpn.html" data-en="VPN" data-ru="VPN">VPN</a>
-      <a href="../ru/software.html" data-en="Software" data-ru="Софт">Software</a>
-      <a href="../ru/courses.html" data-en="Courses" data-ru="Курсы">Courses</a>
-      <a href="../ru/blog/index.html" data-en="Blog" data-ru="Блог">Blog</a>
+      <a href="vpn.html">VPN</a>
+      <a href="software.html">Программы</a>
+      <a href="courses.html">Курсы</a>
+      <a href="blog/index.html">Блог</a>
     </nav>
     <div class="lang-btns">
-      <button class="lang-btn" onclick="window.location.href='search.html'">EN</button>
+      <button class="lang-btn" onclick="window.location.href='../search.html'">EN</button>
       <button class="lang-btn active">RU</button>
     </div>
     <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
   </div>
 </header>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="index.html">🏠 Home</a>
+  <a href="index.html">🏠 Главная</a>
   <a href="vpn.html">🔒 VPN</a>
-  <a href="software.html">💻 Software</a>
-  <a href="courses.html">🎓 Courses</a>
-  <a href="shopping.html">🛒 Shopping</a>
-  <a href="gaming.html">🎮 Gaming</a>
-  <a href="travel.html">✈️ Travel</a>
+  <a href="software.html">💻 Программы</a>
+  <a href="courses.html">🎓 Курсы</a>
+  <a href="shopping.html">🛒 Покупки</a>
+  <a href="gaming.html">🎮 Игры</a>
+  <a href="travel.html">✈️ Путешествия</a>
+  <a href="hosting.html">☁️ Хостинг</a>
+  <a href="../index.html">🇬🇧 English version</a>
 </nav>
 
 <div class="search-hero">
   <div class="container">
-    <h1 data-en="Search Promo Codes" data-ru="Поиск промокодов">Search Promo Codes</h1>
+    <h1>Поиск промокодов</h1>
     <div class="search-box">
-      <input type="text" id="q" placeholder="Search NordVPN, Udemy, Amazon..." data-en="Search NordVPN, Udemy, Amazon..." data-ru="Поиск NordVPN, Udemy, Amazon..." />
-      <button onclick="doSearch()" data-en="Search" data-ru="Найти">Search</button>
+      <input type="text" id="q" placeholder="Поиск NordVPN, Udemy, Amazon..." />
+      <button onclick="doSearch()">Найти</button>
     </div>
     <div class="popular">
-      <span class="lbl" data-en="Popular:" data-ru="Популярное:">Popular:</span>
+      <span class="lbl">Популярное:</span>
       <span class="pop-tag" onclick="quick('NordVPN')">NordVPN</span>
       <span class="pop-tag" onclick="quick('Udemy')">Udemy</span>
       <span class="pop-tag" onclick="quick('Spotify')">Spotify</span>
@@ -87,15 +91,15 @@
 <main style="padding:40px 0 80px;">
   <div class="container">
     <div class="filters">
-      <button class="f-btn active" onclick="setFilter(this,'all')" data-en="All" data-ru="Все">All</button>
-      <button class="f-btn" onclick="setFilter(this,'vpn')" data-en="🔒 VPN" data-ru="🔒 VPN">🔒 VPN</button>
-      <button class="f-btn" onclick="setFilter(this,'software')" data-en="💻 Software" data-ru="💻 Программы">💻 Software</button>
-      <button class="f-btn" onclick="setFilter(this,'courses')" data-en="🎓 Courses" data-ru="🎓 Курсы">🎓 Courses</button>
-      <button class="f-btn" onclick="setFilter(this,'streaming')" data-en="🎬 Streaming" data-ru="🎬 Стриминг">🎬 Streaming</button>
-      <button class="f-btn" onclick="setFilter(this,'shopping')" data-en="🛒 Shopping" data-ru="🛒 Покупки">🛒 Shopping</button>
-      <button class="f-btn" onclick="setFilter(this,'gaming')" data-en="🎮 Gaming" data-ru="🎮 Игры">🎮 Gaming</button>
-      <button class="f-btn" onclick="setFilter(this,'travel')" data-en="✈️ Travel" data-ru="✈️ Путешествия">✈️ Travel</button>
-      <button class="f-btn" onclick="setFilter(this,'hosting')" data-en="☁️ Hosting" data-ru="☁️ Хостинг">☁️ Hosting</button>
+      <button class="f-btn active" onclick="setFilter(this,'all')">Все</button>
+      <button class="f-btn" onclick="setFilter(this,'vpn')">🔒 VPN</button>
+      <button class="f-btn" onclick="setFilter(this,'software')">💻 Программы</button>
+      <button class="f-btn" onclick="setFilter(this,'courses')">🎓 Курсы</button>
+      <button class="f-btn" onclick="setFilter(this,'streaming')">🎬 Стриминг</button>
+      <button class="f-btn" onclick="setFilter(this,'shopping')">🛒 Покупки</button>
+      <button class="f-btn" onclick="setFilter(this,'gaming')">🎮 Игры</button>
+      <button class="f-btn" onclick="setFilter(this,'travel')">✈️ Путешествия</button>
+      <button class="f-btn" onclick="setFilter(this,'hosting')">☁️ Хостинг</button>
     </div>
     <div class="res-count" id="cnt"></div>
     <div id="results"></div>
@@ -105,9 +109,23 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><a href="index.html" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a><p>Best promo codes updated daily.</p></div>
-      <div class="footer-col"><h4>Categories</h4><a href="vpn.html">VPN</a><a href="software.html">Software</a><a href="courses.html">Courses</a><a href="shopping.html">Shopping</a></div>
-      <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div>
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo"><div class="logo-icon">💰</div> SaveHub</a>
+        <p>Лучшие промокоды обновляются ежедневно.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Категории</h4>
+        <a href="vpn.html">VPN</a>
+        <a href="software.html">Программы</a>
+        <a href="courses.html">Курсы</a>
+        <a href="shopping.html">Покупки</a>
+      </div>
+      <div class="footer-col">
+        <h4>Компания</h4>
+        <a href="about.html">О нас</a>
+        <a href="privacy.html">Политика</a>
+        <a href="contact.html">Контакт</a>
+      </div>
     </div>
     <div class="footer-bottom">&copy; <span id="yr"></span> SaveHub.blog</div>
   </div>
@@ -116,59 +134,52 @@
 <div id="readProgress"></div>
 
 <script>
-var lang = 'ru';
 var cat = 'all';
 
 var ITEMS = [
-  {c:'vpn',i:'🔒',n:'NordVPN',de:'68% OFF + 3 Months FREE',dr:'Скидка 68% + 3 месяца',dd:'#1 rated VPN — 111 countries.',ddr:'VPN #1 — 111 стран.',code:'SAVEHUB68',url:'../ru/vpn.html',t:'nordvpn vpn security'},
-  {c:'vpn',i:'🛡️',n:'ExpressVPN',de:'49% OFF + 3 Months FREE',dr:'Скидка 49% + 3 месяца',dd:'Fastest VPN — 105 countries.',ddr:'Самый быстрый VPN.',code:'EXPRESS49',url:'../ru/vpn.html',t:'expressvpn vpn fast'},
-  {c:'vpn',i:'🌊',n:'Surfshark',de:'83% OFF — $2.30/month',dr:'Скидка 83% — $2.30/мес',dd:'Unlimited devices, best value.',ddr:'Безлимит устройств.',code:'SURF83',url:'../ru/vpn.html',t:'surfshark vpn unlimited'},
-  {c:'vpn',i:'👻',n:'CyberGhost',de:'82% OFF + 4 Months FREE',dr:'Скидка 82% + 4 месяца',dd:'9,700+ servers worldwide.',ddr:'9700+ серверов.',code:'GHOST82',url:'../ru/vpn.html',t:'cyberghost vpn servers'},
-  {c:'software',i:'✍️',n:'Grammarly',de:'20% OFF Premium',dr:'Скидка 20% на Premium',dd:'AI writing assistant.',ddr:'ИИ-помощник для письма.',code:'GRAM20',url:'../ru/software.html',t:'grammarly writing grammar'},
-  {c:'software',i:'🎨',n:'Canva Pro',de:'30% OFF Annual',dr:'Скидка 30% на год',dd:'Design with 100M+ templates.',ddr:'Дизайн с 100M+ шаблонами.',code:'CANVA30',url:'../ru/software.html',t:'canva design creative'},
-  {c:'software',i:'🔑',n:'1Password',de:'25% OFF First Year',dr:'Скидка 25% на первый год',dd:'Best password manager.',ddr:'Лучший менеджер паролей.',code:'1PASS25',url:'../ru/software.html',t:'1password security password'},
-  {c:'software',i:'📊',n:'Microsoft 365',de:'Save $20 on Annual',dr:'Экономия $20 на год',dd:'Word, Excel, PowerPoint.',ddr:'Word, Excel, PowerPoint.',code:'MS365SAVE',url:'../ru/software.html',t:'microsoft office word excel'},
-  {c:'software',i:'🖌️',n:'Adobe Creative Cloud',de:'30% OFF First Year',dr:'Скидка 30% на первый год',dd:'Photoshop, Illustrator and more.',ddr:'Photoshop, Illustrator и другое.',code:'ADOBE30',url:'../ru/software.html',t:'adobe photoshop design creative'},
-  {c:'software',i:'📝',n:'Notion',de:'20% OFF Plus Plan',dr:'Скидка 20% на Plus',dd:'All-in-one workspace.',ddr:'Всё в одном.',code:'NOTION20',url:'../ru/software.html',t:'notion notes productivity'},
-  {c:'courses',i:'🎓',n:'Udemy',de:'Courses from $9.99',dr:'Курсы от $9.99',dd:'200,000+ courses on any topic.',ddr:'200 000+ курсов.',code:'UDEMY999',url:'../ru/courses.html',t:'udemy courses learning'},
-  {c:'courses',i:'🌐',n:'Coursera Plus',de:'$100 OFF Annual',dr:'Скидка $100 на год',dd:'7,000+ university courses.',ddr:'7000+ курсов от университетов.',code:'PLUS100',url:'../ru/courses.html',t:'coursera university courses'},
-  {c:'courses',i:'🎨',n:'Skillshare',de:'40% OFF Premium',dr:'Скидка 40% на Premium',dd:'Unlimited creative classes.',ddr:'Неограниченные классы.',code:'SKILL40',url:'../ru/courses.html',t:'skillshare creative design'},
-  {c:'courses',i:'🎬',n:'MasterClass',de:'Buy 1 Get 1 FREE',dr:'Купи 1 получи 1',dd:'Learn from world experts.',ddr:'Учитесь у лучших.',code:'MASTER2FOR1',url:'../ru/courses.html',t:'masterclass expert learning'},
-  {c:'courses',i:'💼',n:'LinkedIn Learning',de:'1 Month FREE',dr:'1 месяц БЕСПЛАТНО',dd:'Professional business courses.',ddr:'Профессиональные курсы.',code:'LINKEDIN1MO',url:'../ru/courses.html',t:'linkedin learning business'},
-  {c:'courses',i:'💻',n:'DataCamp',de:'50% OFF Annual',dr:'Скидка 50% на год',dd:'Data science and AI courses.',ddr:'Курсы по Data Science и ИИ.',code:'DATA50',url:'../ru/courses.html',t:'datacamp data science python'},
-  {c:'streaming',i:'🎵',n:'Spotify Premium',de:'3 Months for $0.99',dr:'3 месяца за $0.99',dd:'Ad-free music, 100M+ songs.',ddr:'Музыка без рекламы.',code:'SPOT099',url:'../ru/streaming.html',t:'spotify music streaming'},
-  {c:'streaming',i:'🏰',n:'Disney+',de:'20% OFF Annual',dr:'Скидка 20% на год',dd:'Disney, Marvel, Star Wars.',ddr:'Disney, Marvel, Звёздные войны.',code:'DISNEY20',url:'../ru/streaming.html',t:'disney plus streaming movies'},
-  {c:'streaming',i:'▶️',n:'YouTube Premium',de:'2 Months FREE',dr:'2 месяца БЕСПЛАТНО',dd:'Ad-free YouTube + Music.',ddr:'YouTube без рекламы.',code:'YT2FREE',url:'../ru/streaming.html',t:'youtube premium video'},
-  {c:'streaming',i:'📺',n:'Hulu',de:'$0.99/month x 3',dr:'$0.99/мес x 3',dd:'Movies, TV and live sports.',ddr:'Фильмы, сериалы и спорт.',code:'HULU099',url:'../ru/streaming.html',t:'hulu streaming tv movies'},
-  {c:'shopping',i:'🛒',n:'Amazon',de:'Up to 70% OFF',dr:'Скидки до 70%',dd:"World's largest online store.",ddr:'Крупнейший магазин мира.',code:'AMAZON70',url:'../ru/shopping.html',t:'amazon shopping deals'},
-  {c:'shopping',i:'📦',n:'AliExpress',de:'$4 OFF over $20',dr:'Скидка $4 от $20',dd:'Cheap products worldwide.',ddr:'Дешёвые товары, доставка.',code:'ALI4OFF',url:'../ru/shopping.html',t:'aliexpress cheap shopping'},
-  {c:'shopping',i:'👟',n:'Nike',de:'20% OFF First Order',dr:'Скидка 20% на первый',dd:'Official Nike store.',ddr:'Официальный магазин Nike.',code:'NIKE20NEW',url:'../ru/shopping.html',t:'nike shoes sports fashion'},
-  {c:'shopping',i:'🎽',n:'Adidas',de:'30% OFF Sale Items',dr:'Скидка 30% на распродажу',dd:'Sports shoes and clothing.',ddr:'Спортивная обувь и одежда.',code:'ADIDAS30',url:'../ru/shopping.html',t:'adidas sports shoes fashion'},
-  {c:'gaming',i:'🎮',n:'Steam',de:'Up to 90% OFF',dr:'Скидки до 90%',dd:"World's largest PC gaming.",ddr:'Крупнейшая платформа ПК.',code:'STEAM90',url:'../ru/gaming.html',t:'steam gaming pc games'},
-  {c:'gaming',i:'🎁',n:'Epic Games Store',de:'Free game weekly + 25% OFF',dr:'Бесплатная игра + 25%',dd:'Free games every week.',ddr:'Бесплатные игры каждую неделю.',code:'EPIC25',url:'../ru/gaming.html',t:'epic games free gaming'},
-  {c:'gaming',i:'🟢',n:'Xbox Game Pass',de:'3 Months for $1',dr:'3 месяца за $1',dd:'100+ games on console and PC.',ddr:'100+ игр на консоли и ПК.',code:'XBOX3FOR1',url:'../ru/gaming.html',t:'xbox gamepass microsoft gaming'},
-  {c:'gaming',i:'🔵',n:'PlayStation Store',de:'25% OFF PS Plus',dr:'Скидка 25% на PS Plus',dd:'Official PlayStation Store.',ddr:'Официальный магазин PS.',code:'PSPLUS25',url:'../ru/gaming.html',t:'playstation ps5 sony gaming'},
-  {c:'travel',i:'🏨',n:'Booking.com',de:'Genius saves 20%',dr:'Genius экономит 20%',dd:'Hotels and apartments worldwide.',ddr:'Отели по всему миру.',code:'BOOK20',url:'../ru/travel.html',t:'booking hotel travel accommodation'},
-  {c:'travel',i:'🏠',n:'Airbnb',de:'$50 OFF first stay',dr:'Скидка $50 на первое',dd:'Unique stays worldwide.',ddr:'Уникальное жильё.',code:'AIRBNB50',url:'../ru/travel.html',t:'airbnb rent home travel'},
-  {c:'travel',i:'✈️',n:'Skyscanner',de:'Flights 70% cheaper',dr:'Рейсы на 70% дешевле',dd:'Compare 100s of airlines.',ddr:'Сравните авиакомпании.',code:'SKY70',url:'../ru/travel.html',t:'skyscanner flights cheap airline'},
-  {c:'hosting',i:'🌐',n:'Hostinger',de:'82% OFF + Free Domain',dr:'Скидка 82% + домен',dd:'Best value web hosting.',ddr:'Лучший хостинг по цене.',code:'HOSTINGER82',url:'../ru/hosting.html',t:'hostinger hosting web domain'},
-  {c:'hosting',i:'🏷️',n:'Namecheap',de:'.com for $5.98/year',dr:'Домен .com за $5.98',dd:'Cheap domains and hosting.',ddr:'Дешёвые домены и хостинг.',code:'CHEAP598',url:'../ru/hosting.html',t:'namecheap domain hosting cheap'},
-  {c:'hosting',i:'🔵',n:'Bluehost',de:'65% OFF + Free Domain',dr:'Скидка 65% + домен',dd:'WordPress recommended hosting.',ddr:'Хостинг для WordPress.',code:'BLUE65',url:'../ru/hosting.html',t:'bluehost wordpress hosting'},
+  {c:'vpn',i:'🔒',n:'NordVPN',d:'Скидка 68% + 3 месяца БЕСПЛАТНО',dd:'VPN #1 — 111 стран, без логов.',code:'SAVEHUB68',url:'vpn.html',t:'nordvpn vpn'},
+  {c:'vpn',i:'🛡️',n:'ExpressVPN',d:'Скидка 49% + 3 месяца',dd:'Самый быстрый VPN — 105 стран.',code:'EXPRESS49',url:'vpn.html',t:'expressvpn vpn'},
+  {c:'vpn',i:'🌊',n:'Surfshark',d:'Скидка 83% — $2.30/мес',dd:'Безлимит устройств, лучшая цена.',code:'SURF83',url:'vpn.html',t:'surfshark vpn'},
+  {c:'vpn',i:'👻',n:'CyberGhost',d:'Скидка 82% + 4 месяца',dd:'9 700+ серверов по всему миру.',code:'GHOST82',url:'vpn.html',t:'cyberghost vpn'},
+  {c:'software',i:'✍️',n:'Grammarly',d:'Скидка 20% на Premium',dd:'ИИ-помощник для письма.',code:'GRAM20',url:'software.html',t:'grammarly письмо грамматика'},
+  {c:'software',i:'🎨',n:'Canva Pro',d:'Скидка 30% на год',dd:'Дизайн с 100M+ шаблонами.',code:'CANVA30',url:'software.html',t:'canva дизайн'},
+  {c:'software',i:'🔑',n:'1Password',d:'Скидка 25% на первый год',dd:'Лучший менеджер паролей.',code:'1PASS25',url:'software.html',t:'1password пароли'},
+  {c:'software',i:'📊',n:'Microsoft 365',d:'Экономия $20 на год',dd:'Word, Excel, PowerPoint.',code:'MS365SAVE',url:'software.html',t:'microsoft office word excel'},
+  {c:'software',i:'🖌️',n:'Adobe Creative Cloud',d:'Скидка 30% на первый год',dd:'Photoshop, Illustrator и другое.',code:'ADOBE30',url:'software.html',t:'adobe photoshop дизайн'},
+  {c:'software',i:'📝',n:'Notion',d:'Скидка 20% на Plus',dd:'Заметки, задачи, базы данных.',code:'NOTION20',url:'software.html',t:'notion заметки продуктивность'},
+  {c:'courses',i:'🎓',n:'Udemy',d:'Курсы от $9.99',dd:'200 000+ курсов по любой теме.',code:'UDEMY999',url:'courses.html',t:'udemy курсы обучение'},
+  {c:'courses',i:'🌐',n:'Coursera Plus',d:'Скидка $100 на год',dd:'7 000+ курсов от университетов.',code:'PLUS100',url:'courses.html',t:'coursera университет курсы'},
+  {c:'courses',i:'🎨',n:'Skillshare',d:'Скидка 40% на Premium',dd:'Неограниченные творческие классы.',code:'SKILL40',url:'courses.html',t:'skillshare творчество дизайн'},
+  {c:'courses',i:'🎬',n:'MasterClass',d:'Купи 1 получи 1 БЕСПЛАТНО',dd:'Учитесь у лучших в мире.',code:'MASTER2FOR1',url:'courses.html',t:'masterclass курсы'},
+  {c:'courses',i:'💼',n:'LinkedIn Learning',d:'1 месяц БЕСПЛАТНО',dd:'Профессиональные курсы.',code:'LINKEDIN1MO',url:'courses.html',t:'linkedin обучение бизнес'},
+  {c:'courses',i:'💻',n:'DataCamp',d:'Скидка 50% на год',dd:'Data Science и ИИ курсы.',code:'DATA50',url:'courses.html',t:'datacamp python data science'},
+  {c:'streaming',i:'🎵',n:'Spotify Premium',d:'3 месяца за $0.99',dd:'Музыка без рекламы, 100M+ треков.',code:'SPOT099',url:'streaming.html',t:'spotify музыка стриминг'},
+  {c:'streaming',i:'🏰',n:'Disney+',d:'Скидка 20% на год',dd:'Disney, Marvel, Звёздные войны.',code:'DISNEY20',url:'streaming.html',t:'disney стриминг фильмы'},
+  {c:'streaming',i:'▶️',n:'YouTube Premium',d:'2 месяца БЕСПЛАТНО',dd:'YouTube без рекламы.',code:'YT2FREE',url:'streaming.html',t:'youtube видео стриминг'},
+  {c:'streaming',i:'📺',n:'Hulu',d:'$0.99/мес x 3',dd:'Фильмы, сериалы и спорт.',code:'HULU099',url:'streaming.html',t:'hulu стриминг сериалы'},
+  {c:'shopping',i:'🛒',n:'Amazon',d:'Скидки до 70%',dd:'Крупнейший магазин мира.',code:'AMAZON70',url:'shopping.html',t:'amazon покупки магазин'},
+  {c:'shopping',i:'📦',n:'AliExpress',d:'Скидка $4 от $20',dd:'Дешёвые товары, доставка.',code:'ALI4OFF',url:'shopping.html',t:'aliexpress покупки дешево'},
+  {c:'shopping',i:'👟',n:'Nike',d:'Скидка 20% на первый заказ',dd:'Официальный магазин Nike.',code:'NIKE20NEW',url:'shopping.html',t:'nike обувь спорт'},
+  {c:'shopping',i:'🎽',n:'Adidas',d:'Скидка 30% на распродажу',dd:'Спортивная обувь и одежда.',code:'ADIDAS30',url:'shopping.html',t:'adidas спорт одежда'},
+  {c:'gaming',i:'🎮',n:'Steam',d:'Скидки до 90%',dd:'Крупнейшая игровая платформа.',code:'STEAM90',url:'gaming.html',t:'steam игры пк'},
+  {c:'gaming',i:'🎁',n:'Epic Games Store',d:'Бесплатная игра + скидка 25%',dd:'Бесплатные игры каждую неделю.',code:'EPIC25',url:'gaming.html',t:'epic games бесплатно'},
+  {c:'gaming',i:'🟢',n:'Xbox Game Pass',d:'3 месяца за $1',dd:'100+ игр на консоли и ПК.',code:'XBOX3FOR1',url:'gaming.html',t:'xbox игры консоль'},
+  {c:'gaming',i:'🔵',n:'PlayStation Store',d:'Скидка 25% на PS Plus',dd:'Официальный магазин PlayStation.',code:'PSPLUS25',url:'gaming.html',t:'playstation ps5 игры'},
+  {c:'travel',i:'🏨',n:'Booking.com',d:'Genius экономит 20%',dd:'Отели по всему миру.',code:'BOOK20',url:'travel.html',t:'booking отель путешествия'},
+  {c:'travel',i:'🏠',n:'Airbnb',d:'Скидка $50 на первое бронирование',dd:'Уникальное жильё по всему миру.',code:'AIRBNB50',url:'travel.html',t:'airbnb жильё путешествия'},
+  {c:'travel',i:'✈️',n:'Skyscanner',d:'Рейсы на 70% дешевле',dd:'Сравните авиакомпании.',code:'SKY70',url:'travel.html',t:'skyscanner авиабилеты рейсы'},
+  {c:'hosting',i:'🌐',n:'Hostinger',d:'Скидка 82% + домен',dd:'Лучший хостинг по цене.',code:'HOSTINGER82',url:'hosting.html',t:'hostinger хостинг домен'},
+  {c:'hosting',i:'🏷️',n:'Namecheap',d:'Домен .com за $5.98',dd:'Дешёвые домены и хостинг.',code:'CHEAP598',url:'hosting.html',t:'namecheap домен хостинг'},
+  {c:'hosting',i:'🔵',n:'Bluehost',d:'Скидка 65% + домен',dd:'Хостинг для WordPress.',code:'BLUE65',url:'hosting.html',t:'bluehost wordpress хостинг'},
 ];
 
 var CAT_LABELS = {
-  vpn: {en:'VPN', ru:'VPN'},
-  software: {en:'Software', ru:'Программы'},
-  courses: {en:'Courses', ru:'Курсы'},
-  streaming: {en:'Streaming', ru:'Стриминг'},
-  shopping: {en:'Shopping', ru:'Покупки'},
-  gaming: {en:'Gaming', ru:'Игры'},
-  travel: {en:'Travel', ru:'Путешествия'},
-  hosting: {en:'Hosting', ru:'Хостинг'}
+  vpn:'VPN', software:'Программы', courses:'Курсы',
+  streaming:'Стриминг', shopping:'Покупки',
+  gaming:'Игры', travel:'Путешествия', hosting:'Хостинг'
 };
 
 function render() {
-  var l = lang;
   var q = document.getElementById('q').value.toLowerCase().trim();
   var box = document.getElementById('results');
   var cnt = document.getElementById('cnt');
@@ -178,38 +189,31 @@ function render() {
     var mq = !q ||
       item.n.toLowerCase().indexOf(q) !== -1 ||
       item.t.indexOf(q) !== -1 ||
-      item.de.toLowerCase().indexOf(q) !== -1 ||
+      item.d.toLowerCase().indexOf(q) !== -1 ||
       item.code.toLowerCase().indexOf(q) !== -1;
     return mc && mq;
   });
 
   if (!q && cat === 'all') {
-    cnt.textContent = l === 'ru' ? 'Начните вводить для поиска...' : 'Start typing to search...';
+    cnt.textContent = 'Начните вводить для поиска...';
     box.innerHTML = '';
     return;
   }
 
-  cnt.textContent = l === 'ru'
-    ? 'Найдено: ' + res.length + ' результатов'
-    : res.length + ' results found';
+  cnt.textContent = 'Найдено: ' + res.length + ' результатов';
 
   if (res.length === 0) {
-    box.innerHTML = '<div class="no-res"><div class="em">🔍</div><p>' +
-      (l === 'ru' ? 'Ничего не найдено. Попробуйте другой запрос.' : 'No results found. Try a different search.') +
-      '</p></div>';
+    box.innerHTML = '<div class="no-res"><div class="em">🔍</div><p>Ничего не найдено. Попробуйте другой запрос.</p></div>';
     return;
   }
 
   box.innerHTML = res.map(function(item) {
-    var deal = l === 'ru' ? item.dr : item.de;
-    var desc = l === 'ru' ? item.ddr : item.dd;
-    var catLbl = CAT_LABELS[item.c] ? CAT_LABELS[item.c][l] : item.c;
     return '<a href="' + item.url + '" class="res-card">' +
       '<div class="res-icon">' + item.i + '</div>' +
       '<div class="res-info">' +
-        '<div class="res-type">' + catLbl + '</div>' +
-        '<div class="res-title">' + item.n + ' — ' + deal + '</div>' +
-        '<div class="res-desc">' + desc + '</div>' +
+        '<div class="res-type">' + CAT_LABELS[item.c] + '</div>' +
+        '<div class="res-title">' + item.n + ' — ' + item.d + '</div>' +
+        '<div class="res-desc">' + item.dd + '</div>' +
       '</div>' +
       '<div class="res-code">' + item.code + '</div>' +
     '</a>';
@@ -217,35 +221,11 @@ function render() {
 }
 
 function doSearch() { render(); }
-
-function quick(term) {
-  document.getElementById('q').value = term;
-  render();
-}
-
+function quick(term) { document.getElementById('q').value = term; render(); }
 function setFilter(btn, c) {
   cat = c;
   document.querySelectorAll('.f-btn').forEach(function(b){ b.classList.remove('active'); });
   btn.classList.add('active');
-  render();
-}
-
-function applyLang(l) {
-  document.documentElement.lang = l;
-  document.querySelectorAll('[data-en]').forEach(function(el) {
-    var t = el.getAttribute('data-' + l);
-    if (!t) return;
-    if (el.tagName === 'INPUT') { el.placeholder = t; return; }
-    el.textContent = t;
-  });
-}
-
-function setLang(l) {
-  lang = l;
-  localStorage.setItem('sh_lang', l);
-  document.getElementById('langEN').classList.toggle('active', l === 'en');
-  document.getElementById('langRU').classList.toggle('active', l === 'ru');
-  applyLang(l);
   render();
 }
 
@@ -259,26 +239,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('readProgress').style.width = (d > 0 ? s/d*100 : 0) + '%';
     document.getElementById('scrollTop').style.display = s > 400 ? 'flex' : 'none';
   });
-
-  // Real-time search as user types
   document.getElementById('q').addEventListener('input', function() { render(); });
   document.getElementById('q').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') render();
   });
-
-  // Check URL params
   var params = new URLSearchParams(window.location.search);
   if (params.get('q')) {
     document.getElementById('q').value = params.get('q');
+    render();
   }
-
-  if (lang === 'ru') {
-    document.getElementById('langRU').classList.add('active');
-    document.getElementById('langEN').classList.remove('active');
-    applyLang('ru');
-  }
-
-  render();
 });
 </script>
 </body>
