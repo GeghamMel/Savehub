@@ -97,10 +97,14 @@
 <div id="readProgress"></div>
 
 <script>
-var ITEMS = [{"logo": "🌐", "name": "Hostinger", "cat": "Хостинг", "desc": "Самый доступный хостинг с отличной производительностью. От $1.99/месяц.", "deal": "Скидка 82% + бесплатный домен", "code": "HOSTINGER82", "badge": "hot", "badge_text": "🔥 Лучшая цена", "url": "https://hostinger.com", "stars": "4.6/5", "reviews": "32 000 отзывов"}, {"logo": "🏷️", "name": "Namecheap", "cat": "Домены", "desc": "Дешёвая регистрация доменов + надёжный хостинг. Домены .com от $5.98/год.", "deal": "Домен .com за $5.98/год", "code": "CHEAP598", "badge": "verified", "badge_text": "✓ Проверен", "url": "https://namecheap.com", "stars": "4.7/5", "reviews": "18 000 отзывов"}, {"logo": "🔵", "name": "Bluehost", "cat": "Хостинг", "desc": "Хостинг рекомендованный WordPress. Простая настройка, поддержка 24/7.", "deal": "Скидка 65% + бесплатный домен на год", "code": "BLUE65", "badge": "new", "badge_text": "✨ Новое", "url": "https://bluehost.com", "stars": "4.3/5", "reviews": "25 000 отзывов"}, {"logo": "⚡", "name": "SiteGround", "cat": "Хостинг", "desc": "Премиальный хостинг известный скоростью и отличной поддержкой клиентов.", "deal": "Скидка 70% на планы хостинга", "code": "SG70OFF", "badge": "hot", "badge_text": "🔥 Популярный", "url": "https://siteground.com", "stars": "4.8/5", "reviews": "14 000 отзывов"}, {"logo": "🟠", "name": "Cloudflare", "cat": "Безопасность", "desc": "Бесплатный CDN, защита от DDoS и DNS. Премиальные планы для расширенных функций.", "deal": "Бесплатный план + скидка 20% на Pro", "code": "CF20PRO", "badge": "new", "badge_text": "✨ Бесплатный план", "url": "https://cloudflare.com", "stars": "4.9/5", "reviews": "8 500 отзывов"}];
+var ITEMS = [];
 function renderItems() {
   var grid = document.getElementById('itemsGrid');
   if (!grid) return;
+  if (ITEMS.length === 0) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 24px;background:white;border-radius:14px;border:1.5px dashed var(--border);"><div style="font-size:3rem;margin-bottom:16px;">🔜</div><p style="color:var(--muted);font-size:1rem;max-width:400px;margin:0 auto;">Скидки на хостинг скоро появятся — мы завершаем партнёрства с провайдерами. Загляните позже!</p></div>';
+    return;
+  }
   var html = '';
   for (var i = 0; i < ITEMS.length; i++) {
     var p = ITEMS[i];

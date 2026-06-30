@@ -97,10 +97,14 @@
 <div id="readProgress"></div>
 
 <script>
-var ITEMS = [{"logo": "🎵", "name": "Spotify Premium", "cat": "Музыка", "desc": "Музыка без рекламы, скачивание, неограниченные пропуски. 100M+ треков.", "deal": "3 месяца Premium за $0.99", "code": "SPOT099", "badge": "hot", "badge_text": "🔥 Лучшая цена", "url": "https://spotify.com", "stars": "4.8/5", "reviews": "85 000 отзывов"}, {"logo": "🏰", "name": "Disney+", "cat": "Стриминг", "desc": "Disney, Marvel, Звёздные войны, Pixar и National Geographic в одном месте.", "deal": "Скидка 20% на годовой план", "code": "DISNEY20", "badge": "new", "badge_text": "✨ Новое", "url": "https://disneyplus.com", "stars": "4.5/5", "reviews": "28 000 отзывов"}, {"logo": "▶️", "name": "YouTube Premium", "cat": "Видео", "desc": "YouTube без рекламы, фоновое воспроизведение, YouTube Music в комплекте.", "deal": "2 месяца БЕСПЛАТНО", "code": "YT2FREE", "badge": "verified", "badge_text": "✓ Проверен", "url": "https://youtube.com/premium", "stars": "4.6/5", "reviews": "15 000 отзывов"}, {"logo": "🍎", "name": "Apple TV+", "cat": "Стриминг", "desc": "Удостоенные наград Apple Originals. Новые шоу и фильмы каждый месяц.", "deal": "7 дней БЕСПЛАТНО", "code": "APPLETV7", "badge": "new", "badge_text": "✨ Пробный период", "url": "https://tv.apple.com", "stars": "4.4/5", "reviews": "10 000 отзывов"}];
+var ITEMS = [];
 function renderItems() {
   var grid = document.getElementById('itemsGrid');
   if (!grid) return;
+  if (ITEMS.length === 0) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 24px;background:white;border-radius:14px;border:1.5px dashed var(--border);"><div style="font-size:3rem;margin-bottom:16px;">🔜</div><p style="color:var(--muted);font-size:1rem;max-width:400px;margin:0 auto;">Скидки на стриминг скоро появятся — мы завершаем партнёрства с провайдерами. Загляните позже!</p></div>';
+    return;
+  }
   var html = '';
   for (var i = 0; i < ITEMS.length; i++) {
     var p = ITEMS[i];
