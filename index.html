@@ -294,7 +294,7 @@ var PROMOS = [
     logo:'🎓', name:'Udemy', cat_en:'Courses', cat_ru:'Курсы',
     desc_en:'200,000+ courses from $9.99', desc_ru:'200 000+ курсов от $9.99',
     deal_en:'Courses from $9.99 — limited time', deal_ru:'Курсы от $9.99 — ограниченное время',
-    code:'UDEMY999', badge:'hot', badge_en:'🔥 Flash Sale', badge_ru:'🔥 Флеш-распродажа',
+    code:'', badge:'hot', badge_en:'🔥 Flash Sale', badge_ru:'🔥 Флеш-распродажа',
     url:'https://trk.udemy.com/c/7446694/3954687/39854', stars:'★★★★½', reviews_en:'45,000 reviews', reviews_ru:'45 000 отзывов'
   },
 ];
@@ -322,10 +322,14 @@ function renderPromos() {
           '<div class="promo-deal-title">' + (l==='ru'?p.deal_ru:p.deal_en) + '</div>' +
           '<div class="promo-deal-desc">' + (l==='ru'?p.desc_ru:p.desc_en) + '</div>' +
         '</div>' +
-        '<div class="promo-code-wrap">' +
+        (p.code ? (
+          '<div class="promo-code-wrap">' +
           '<div class="promo-code" id="code-' + p.name + '">' + p.code + '</div>' +
           '<button class="btn-copy" onclick="copyCode(\'' + p.code + '\',\'' + p.name + '\',\'' + p.url + '\')" data-en="Copy & Visit" data-ru="Копировать">' + (l==='ru'?'Копировать':'Copy & Visit') + '</button>' +
-        '</div>' +
+        '</div>'
+        ) : (
+          '<a href="' + p.url + '" target="_blank" rel="nofollow" class="btn-copy" style="display:block;text-align:center;text-decoration:none;">' + (l==='ru'?'Перейти на сайт →':'Get This Deal →') + '</a>'
+        )) +
       '</div>' +
       '<div class="promo-card-footer">' +
         '<span class="promo-badge ' + badgeClass + '">' + badgeText + '</span>' +

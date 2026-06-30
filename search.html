@@ -131,7 +131,7 @@ var ITEMS = [
   {c:'software',i:'📊',n:'Microsoft 365',de:'Save $20 on Annual',dr:'Экономия $20 на год',dd:'Word, Excel, PowerPoint.',ddr:'Word, Excel, PowerPoint.',code:'MS365SAVE',url:'software.html',t:'microsoft office word excel'},
   {c:'software',i:'🖌️',n:'Adobe Creative Cloud',de:'30% OFF First Year',dr:'Скидка 30% на первый год',dd:'Photoshop, Illustrator and more.',ddr:'Photoshop, Illustrator и другое.',code:'ADOBE30',url:'software.html',t:'adobe photoshop design creative'},
   {c:'software',i:'📝',n:'Notion',de:'20% OFF Plus Plan',dr:'Скидка 20% на Plus',dd:'All-in-one workspace.',ddr:'Всё в одном.',code:'NOTION20',url:'software.html',t:'notion notes productivity'},
-  {c:'courses',i:'🎓',n:'Udemy',de:'Courses from $9.99',dr:'Курсы от $9.99',dd:'200,000+ courses on any topic.',ddr:'200 000+ курсов.',code:'UDEMY999',url:'courses.html',t:'udemy courses learning'},
+  {c:'courses',i:'🎓',n:'Udemy',de:'Courses from $9.99',dr:'Курсы от $9.99',dd:'200,000+ courses on any topic.',ddr:'200 000+ курсов.',code:'',url:'courses.html',t:'udemy courses learning'},
   {c:'courses',i:'🌐',n:'Coursera Plus',de:'$100 OFF Annual',dr:'Скидка $100 на год',dd:'7,000+ university courses.',ddr:'7000+ курсов от университетов.',code:'PLUS100',url:'courses.html',t:'coursera university courses'},
   {c:'courses',i:'🎨',n:'Skillshare',de:'40% OFF Premium',dr:'Скидка 40% на Premium',dd:'Unlimited creative classes.',ddr:'Неограниченные классы.',code:'SKILL40',url:'courses.html',t:'skillshare creative design'},
   {c:'courses',i:'🎬',n:'MasterClass',de:'Buy 1 Get 1 FREE',dr:'Купи 1 получи 1',dd:'Learn from world experts.',ddr:'Учитесь у лучших.',code:'MASTER2FOR1',url:'courses.html',t:'masterclass expert learning'},
@@ -212,7 +212,7 @@ function render() {
         '<div class="res-title">' + item.n + ' — ' + deal + '</div>' +
         '<div class="res-desc">' + desc + '</div>' +
       '</div>' +
-      '<div class="res-code">' + item.code + '</div>' +
+      (item.code ? '<div class="res-code">' + item.code + '</div>' : '') +
     '</a>';
   }).join('');
 }
