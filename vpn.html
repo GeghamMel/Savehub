@@ -129,29 +129,7 @@
     <div id="vpnList"></div>
 
     <!-- Comparison Table -->
-    <h2 style="font-family:var(--font-display);font-size:1.6rem;font-weight:800;margin:48px 0 8px;" data-en="VPN Comparison Table" data-ru="Таблица сравнения VPN">VPN Comparison Table</h2>
-    <p style="color:var(--muted);margin-bottom:0;" data-en="Compare the top VPN services side by side" data-ru="Сравните лучшие VPN сервисы">Compare the top VPN services side by side</p>
-    <div style="overflow-x:auto;">
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th data-en="VPN Service" data-ru="VPN Сервис">VPN Service</th>
-            <th data-en="Best Price/mo" data-ru="Лучшая цена/мес">Best Price/mo</th>
-            <th data-en="Devices" data-ru="Устройства">Devices</th>
-            <th data-en="No Logs" data-ru="Без логов">No Logs</th>
-            <th data-en="Speed" data-ru="Скорость">Speed</th>
-            <th data-en="Our Discount" data-ru="Наша скидка">Our Discount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>NordVPN</strong></td><td style="color:var(--success);font-weight:700;">$3.19/mo</td><td>6</td><td class="check">✓ Audited</td><td>⚡⚡⚡⚡⚡</td><td><span class="promo-badge badge-hot">68% OFF</span></td></tr>
-          <tr><td><strong>ExpressVPN</strong></td><td style="color:var(--success);font-weight:700;">$6.67/mo</td><td>8</td><td class="check">✓ Audited</td><td>⚡⚡⚡⚡⚡</td><td><span class="promo-badge badge-verified">49% OFF</span></td></tr>
-          <tr><td><strong>Surfshark</strong></td><td style="color:var(--success);font-weight:700;">$2.30/mo</td><td>∞</td><td class="check">✓ Audited</td><td>⚡⚡⚡⚡</td><td><span class="promo-badge badge-hot">83% OFF</span></td></tr>
-          <tr><td><strong>CyberGhost</strong></td><td style="color:var(--success);font-weight:700;">$2.19/mo</td><td>7</td><td class="check">✓ Yes</td><td>⚡⚡⚡⚡</td><td><span class="promo-badge badge-new">82% OFF</span></td></tr>
-          <tr><td><strong>Private Internet Access</strong></td><td style="color:var(--success);font-weight:700;">$2.03/mo</td><td>∞</td><td class="check">✓ Audited</td><td>⚡⚡⚡</td><td><span class="promo-badge badge-verified">82% OFF</span></td></tr>
-        </tbody>
-      </table>
-    </div>
+    
 
   </div>
 </main>
@@ -196,66 +174,15 @@
 <script>
 var lang = 'en';
 
-var VPNS = [
-  {
-    id:'nordvpn', logo:'🔒', name:'NordVPN', score:'9.8',
-    desc_en:'The most popular VPN worldwide — ultra-fast servers in 111 countries, double encryption, and a strict no-logs policy audited by independent security firms.',
-    desc_ru:'Самый популярный VPN в мире — сверхбыстрые серверы в 111 странах, двойное шифрование и строгая политика отсутствия логов, подтверждённая независимыми аудиторами.',
-    tags_en:['No Logs','111 Countries','6 Devices','24/7 Support'],
-    tags_ru:['Без логов','111 стран','6 устройств','Поддержка 24/7'],
-    features_en:['✓ 6,000+ servers','✓ Kill switch','✓ Split tunneling','✓ Dark Web Monitor'],
-    features_ru:['✓ 6 000+ серверов','✓ Kill switch','✓ Split tunneling','✓ Мониторинг даркнета'],
-    codes:[
-      {deal_en:'68% OFF + 3 Months FREE — Best NordVPN Deal',deal_ru:'Скидка 68% + 3 месяца БЕСПЛАТНО',desc_en:'Annual plan — from $3.19/month',desc_ru:'Годовой план — от $3.19/месяц',code:'SAVEHUB68'},
-      {deal_en:'Extra 3 months on 2-year plan',deal_ru:'Ещё 3 месяца к 2-летнему плану',desc_en:'2-year plan + 3 months free',desc_ru:'2-летний план + 3 месяца бесплатно',code:'NORD2YEAR'},
-    ],
-    url:'https://nordvpn.com', stars:'★★★★★', reviews:'12,450'
-  },
-  {
-    id:'expressvpn', logo:'🛡️', name:'ExpressVPN', score:'9.5',
-    desc_en:'The fastest VPN on the market with servers in 105 countries. Premium service trusted by millions worldwide. Independent audit confirmed zero logs.',
-    desc_ru:'Самый быстрый VPN на рынке с серверами в 105 странах. Премиальный сервис, которому доверяют миллионы. Независимый аудит подтвердил отсутствие логов.',
-    tags_en:['No Logs','105 Countries','8 Devices','Lightway Protocol'],
-    tags_ru:['Без логов','105 стран','8 устройств','Протокол Lightway'],
-    features_en:['✓ 3,000+ servers','✓ Split tunneling','✓ Network Lock','✓ Router support'],
-    features_ru:['✓ 3 000+ серверов','✓ Split tunneling','✓ Network Lock','✓ Поддержка роутеров'],
-    codes:[
-      {deal_en:'49% OFF + 3 Months FREE',deal_ru:'Скидка 49% + 3 месяца бесплатно',desc_en:'Annual plan — from $6.67/month',desc_ru:'Годовой план — от $6.67/месяц',code:'EXPRESS49'},
-    ],
-    url:'https://expressvpn.com', stars:'★★★★★', reviews:'8,230'
-  },
-  {
-    id:'surfshark', logo:'🌊', name:'Surfshark', score:'9.3',
-    desc_en:'Best value VPN — unlimited devices on one subscription. Great for families or users with many devices. Excellent speeds and strong security features.',
-    desc_ru:'VPN с лучшим соотношением цены и качества — неограниченное количество устройств на одной подписке. Отлично подходит для семей или пользователей с множеством устройств.',
-    tags_en:['Unlimited Devices','100 Countries','CleanWeb','Camouflage Mode'],
-    tags_ru:['Безлимит устройств','100 стран','CleanWeb','Режим камуфляжа'],
-    features_en:['✓ Unlimited devices','✓ Ad blocker included','✓ MultiHop','✓ NoBorders mode'],
-    features_ru:['✓ Неограниченно устройств','✓ Блокировщик рекламы','✓ MultiHop','✓ Режим NoBorders'],
-    codes:[
-      {deal_en:'83% OFF — Only $2.30/month',deal_ru:'Скидка 83% — всего $2.30/месяц',desc_en:'2-year plan — best price ever',desc_ru:'2-летний план — лучшая цена',code:'SURF83'},
-      {deal_en:'Extra 2 months FREE',deal_ru:'Ещё 2 месяца бесплатно',desc_en:'On any annual plan',desc_ru:'На любой годовой план',code:'SURF2FREE'},
-    ],
-    url:'https://surfshark.com', stars:'★★★★½', reviews:'6,100'
-  },
-  {
-    id:'cyberghost', logo:'👻', name:'CyberGhost', score:'9.0',
-    desc_en:'User-friendly VPN with the largest server network — 9,700+ servers in 91 countries. Great for streaming and torrenting. Easy to use for beginners.',
-    desc_ru:'Удобный VPN с крупнейшей сетью серверов — 9 700+ серверов в 91 стране. Отлично подходит для стриминга и торрентов. Прост в использовании для начинающих.',
-    tags_en:['9,700+ Servers','91 Countries','7 Devices','Streaming Optimized'],
-    tags_ru:['9 700+ серверов','91 страна','7 устройств','Оптимизирован для стриминга'],
-    features_en:['✓ 9,700+ servers','✓ Streaming servers','✓ NoSpy servers','✓ 45-day money back'],
-    features_ru:['✓ 9 700+ серверов','✓ Серверы для стриминга','✓ NoSpy серверы','✓ 45 дней возврата'],
-    codes:[
-      {deal_en:'82% OFF + 4 Months FREE',deal_ru:'Скидка 82% + 4 месяца бесплатно',desc_en:'2-year plan — from $2.19/month',desc_ru:'2-летний план — от $2.19/месяц',code:'GHOST82'},
-    ],
-    url:'https://cyberghostvpn.com', stars:'★★★★', reviews:'9,800'
-  },
-];
+var VPNS = [];
 
 function renderVPNs(filter) {
   var l = lang;
   var list = document.getElementById('vpnList');
+  if (VPNS.length === 0) {
+    list.innerHTML = '<div style="text-align:center;padding:60px 24px;background:white;border-radius:14px;border:1.5px dashed var(--border);"><div style="font-size:3rem;margin-bottom:16px;">🔜</div><p style="color:var(--muted);font-size:1rem;max-width:400px;margin:0 auto;">' + (l==='ru'?'VPN скидки скоро появятся — мы завершаем партнёрства с провайдерами. Загляните позже!':'VPN deals coming soon — we are finalizing partnerships with top providers. Check back shortly!') + '</p></div>';
+    return;
+  }
   var vpns = filter === 'best' ? VPNS.slice(0,2) : filter === 'cheap' ? [VPNS[2],VPNS[3]] : VPNS;
 
   list.innerHTML = vpns.map(function(v) {

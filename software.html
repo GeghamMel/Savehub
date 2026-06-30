@@ -86,6 +86,10 @@ var SOFTWARE = [
 function renderSoftware() {
   var l=lang;
   var grid=document.getElementById('softwareGrid');
+  if (SOFTWARE.length === 0) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 24px;background:white;border-radius:14px;border:1.5px dashed var(--border);"><div style="font-size:3rem;margin-bottom:16px;">🔜</div><p style="color:var(--muted);font-size:1rem;max-width:400px;margin:0 auto;">' + (l==='ru'?'Скидки на программы скоро появятся — мы завершаем партнёрства. Загляните позже!':'Software deals coming soon — we are finalizing partnerships. Check back shortly!') + '</p></div>';
+    return;
+  }
   grid.innerHTML=SOFTWARE.map(function(p){
     var bc=p.badge==='hot'?'badge-hot':p.badge==='new'?'badge-new':'badge-verified';
     return '<div class="promo-card"><div class="promo-card-header"><div class="promo-logo">'+p.logo+'</div><div class="promo-info"><h3>'+p.name+'</h3><p>'+(l==='ru'?p.cat_ru:p.cat_en)+'</p></div><div class="promo-rating"><div class="promo-stars">'+p.stars+'</div><div class="promo-reviews">'+(l==='ru'?p.reviews_ru:p.reviews_en)+'</div></div></div><div class="promo-card-body"><div class="promo-deal"><div class="promo-deal-title">'+(l==='ru'?p.deal_ru:p.deal_en)+'</div><div class="promo-deal-desc">'+(l==='ru'?p.desc_ru:p.desc_en)+'</div></div><div class="promo-code-wrap"><div class="promo-code">'+p.code+'</div><button class="btn-copy" onclick="copyC('+"'"+p.code+"'"+','+"'"+p.url+"'"+',this)">'+(l==='ru'?'Копировать':'Copy & Visit')+'</button></div></div><div class="promo-card-footer"><span class="promo-badge '+bc+'">'+(l==='ru'?p.badge_ru:p.badge_en)+'</span><a href="'+p.url+'" target="_blank" rel="nofollow" class="btn-visit">'+(l==='ru'?'На сайт →':'Visit →')+'</a></div></div>';

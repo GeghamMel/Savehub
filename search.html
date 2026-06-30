@@ -74,13 +74,7 @@
     </div>
     <div class="popular">
       <span class="lbl" data-en="Popular:" data-ru="Популярное:">Popular:</span>
-      <span class="pop-tag" onclick="quick('NordVPN')">NordVPN</span>
       <span class="pop-tag" onclick="quick('Udemy')">Udemy</span>
-      <span class="pop-tag" onclick="quick('Spotify')">Spotify</span>
-      <span class="pop-tag" onclick="quick('Amazon')">Amazon</span>
-      <span class="pop-tag" onclick="quick('Steam')">Steam</span>
-      <span class="pop-tag" onclick="quick('Grammarly')">Grammarly</span>
-      <span class="pop-tag" onclick="quick('Hostinger')">Hostinger</span>
     </div>
   </div>
 </div>
@@ -89,14 +83,7 @@
   <div class="container">
     <div class="filters">
       <button class="f-btn active" onclick="setFilter(this,'all')" data-en="All" data-ru="Все">All</button>
-      <button class="f-btn" onclick="setFilter(this,'vpn')" data-en="🔒 VPN" data-ru="🔒 VPN">🔒 VPN</button>
-      <button class="f-btn" onclick="setFilter(this,'software')" data-en="💻 Software" data-ru="💻 Программы">💻 Software</button>
       <button class="f-btn" onclick="setFilter(this,'courses')" data-en="🎓 Courses" data-ru="🎓 Курсы">🎓 Courses</button>
-      <button class="f-btn" onclick="setFilter(this,'streaming')" data-en="🎬 Streaming" data-ru="🎬 Стриминг">🎬 Streaming</button>
-      <button class="f-btn" onclick="setFilter(this,'shopping')" data-en="🛒 Shopping" data-ru="🛒 Покупки">🛒 Shopping</button>
-      <button class="f-btn" onclick="setFilter(this,'gaming')" data-en="🎮 Gaming" data-ru="🎮 Игры">🎮 Gaming</button>
-      <button class="f-btn" onclick="setFilter(this,'travel')" data-en="✈️ Travel" data-ru="✈️ Путешествия">✈️ Travel</button>
-      <button class="f-btn" onclick="setFilter(this,'hosting')" data-en="☁️ Hosting" data-ru="☁️ Хостинг">☁️ Hosting</button>
     </div>
     <div class="res-count" id="cnt"></div>
     <div id="results"></div>
@@ -121,40 +108,7 @@ var lang = 'en';
 var cat = 'all';
 
 var ITEMS = [
-  {c:'vpn',i:'🔒',n:'NordVPN',de:'68% OFF + 3 Months FREE',dr:'Скидка 68% + 3 месяца',dd:'#1 rated VPN — 111 countries.',ddr:'VPN #1 — 111 стран.',code:'SAVEHUB68',url:'vpn.html',t:'nordvpn vpn security'},
-  {c:'vpn',i:'🛡️',n:'ExpressVPN',de:'49% OFF + 3 Months FREE',dr:'Скидка 49% + 3 месяца',dd:'Fastest VPN — 105 countries.',ddr:'Самый быстрый VPN.',code:'EXPRESS49',url:'vpn.html',t:'expressvpn vpn fast'},
-  {c:'vpn',i:'🌊',n:'Surfshark',de:'83% OFF — $2.30/month',dr:'Скидка 83% — $2.30/мес',dd:'Unlimited devices, best value.',ddr:'Безлимит устройств.',code:'SURF83',url:'vpn.html',t:'surfshark vpn unlimited'},
-  {c:'vpn',i:'👻',n:'CyberGhost',de:'82% OFF + 4 Months FREE',dr:'Скидка 82% + 4 месяца',dd:'9,700+ servers worldwide.',ddr:'9700+ серверов.',code:'GHOST82',url:'vpn.html',t:'cyberghost vpn servers'},
-  {c:'software',i:'✍️',n:'Grammarly',de:'20% OFF Premium',dr:'Скидка 20% на Premium',dd:'AI writing assistant.',ddr:'ИИ-помощник для письма.',code:'GRAM20',url:'software.html',t:'grammarly writing grammar'},
-  {c:'software',i:'🎨',n:'Canva Pro',de:'30% OFF Annual',dr:'Скидка 30% на год',dd:'Design with 100M+ templates.',ddr:'Дизайн с 100M+ шаблонами.',code:'CANVA30',url:'software.html',t:'canva design creative'},
-  {c:'software',i:'🔑',n:'1Password',de:'25% OFF First Year',dr:'Скидка 25% на первый год',dd:'Best password manager.',ddr:'Лучший менеджер паролей.',code:'1PASS25',url:'software.html',t:'1password security password'},
-  {c:'software',i:'📊',n:'Microsoft 365',de:'Save $20 on Annual',dr:'Экономия $20 на год',dd:'Word, Excel, PowerPoint.',ddr:'Word, Excel, PowerPoint.',code:'MS365SAVE',url:'software.html',t:'microsoft office word excel'},
-  {c:'software',i:'🖌️',n:'Adobe Creative Cloud',de:'30% OFF First Year',dr:'Скидка 30% на первый год',dd:'Photoshop, Illustrator and more.',ddr:'Photoshop, Illustrator и другое.',code:'ADOBE30',url:'software.html',t:'adobe photoshop design creative'},
-  {c:'software',i:'📝',n:'Notion',de:'20% OFF Plus Plan',dr:'Скидка 20% на Plus',dd:'All-in-one workspace.',ddr:'Всё в одном.',code:'NOTION20',url:'software.html',t:'notion notes productivity'},
   {c:'courses',i:'🎓',n:'Udemy',de:'Courses from $9.99',dr:'Курсы от $9.99',dd:'200,000+ courses on any topic.',ddr:'200 000+ курсов.',code:'',url:'courses.html',t:'udemy courses learning'},
-  {c:'courses',i:'🌐',n:'Coursera Plus',de:'$100 OFF Annual',dr:'Скидка $100 на год',dd:'7,000+ university courses.',ddr:'7000+ курсов от университетов.',code:'PLUS100',url:'courses.html',t:'coursera university courses'},
-  {c:'courses',i:'🎨',n:'Skillshare',de:'40% OFF Premium',dr:'Скидка 40% на Premium',dd:'Unlimited creative classes.',ddr:'Неограниченные классы.',code:'SKILL40',url:'courses.html',t:'skillshare creative design'},
-  {c:'courses',i:'🎬',n:'MasterClass',de:'Buy 1 Get 1 FREE',dr:'Купи 1 получи 1',dd:'Learn from world experts.',ddr:'Учитесь у лучших.',code:'MASTER2FOR1',url:'courses.html',t:'masterclass expert learning'},
-  {c:'courses',i:'💼',n:'LinkedIn Learning',de:'1 Month FREE',dr:'1 месяц БЕСПЛАТНО',dd:'Professional business courses.',ddr:'Профессиональные курсы.',code:'LINKEDIN1MO',url:'courses.html',t:'linkedin learning business'},
-  {c:'courses',i:'💻',n:'DataCamp',de:'50% OFF Annual',dr:'Скидка 50% на год',dd:'Data science and AI courses.',ddr:'Курсы по Data Science и ИИ.',code:'DATA50',url:'courses.html',t:'datacamp data science python'},
-  {c:'streaming',i:'🎵',n:'Spotify Premium',de:'3 Months for $0.99',dr:'3 месяца за $0.99',dd:'Ad-free music, 100M+ songs.',ddr:'Музыка без рекламы.',code:'SPOT099',url:'streaming.html',t:'spotify music streaming'},
-  {c:'streaming',i:'🏰',n:'Disney+',de:'20% OFF Annual',dr:'Скидка 20% на год',dd:'Disney, Marvel, Star Wars.',ddr:'Disney, Marvel, Звёздные войны.',code:'DISNEY20',url:'streaming.html',t:'disney plus streaming movies'},
-  {c:'streaming',i:'▶️',n:'YouTube Premium',de:'2 Months FREE',dr:'2 месяца БЕСПЛАТНО',dd:'Ad-free YouTube + Music.',ddr:'YouTube без рекламы.',code:'YT2FREE',url:'streaming.html',t:'youtube premium video'},
-  {c:'streaming',i:'📺',n:'Hulu',de:'$0.99/month x 3',dr:'$0.99/мес x 3',dd:'Movies, TV and live sports.',ddr:'Фильмы, сериалы и спорт.',code:'HULU099',url:'streaming.html',t:'hulu streaming tv movies'},
-  {c:'shopping',i:'🛒',n:'Amazon',de:'Up to 70% OFF',dr:'Скидки до 70%',dd:"World's largest online store.",ddr:'Крупнейший магазин мира.',code:'AMAZON70',url:'shopping.html',t:'amazon shopping deals'},
-  {c:'shopping',i:'📦',n:'AliExpress',de:'$4 OFF over $20',dr:'Скидка $4 от $20',dd:'Cheap products worldwide.',ddr:'Дешёвые товары, доставка.',code:'ALI4OFF',url:'shopping.html',t:'aliexpress cheap shopping'},
-  {c:'shopping',i:'👟',n:'Nike',de:'20% OFF First Order',dr:'Скидка 20% на первый',dd:'Official Nike store.',ddr:'Официальный магазин Nike.',code:'NIKE20NEW',url:'shopping.html',t:'nike shoes sports fashion'},
-  {c:'shopping',i:'🎽',n:'Adidas',de:'30% OFF Sale Items',dr:'Скидка 30% на распродажу',dd:'Sports shoes and clothing.',ddr:'Спортивная обувь и одежда.',code:'ADIDAS30',url:'shopping.html',t:'adidas sports shoes fashion'},
-  {c:'gaming',i:'🎮',n:'Steam',de:'Up to 90% OFF',dr:'Скидки до 90%',dd:"World's largest PC gaming.",ddr:'Крупнейшая платформа ПК.',code:'STEAM90',url:'gaming.html',t:'steam gaming pc games'},
-  {c:'gaming',i:'🎁',n:'Epic Games Store',de:'Free game weekly + 25% OFF',dr:'Бесплатная игра + 25%',dd:'Free games every week.',ddr:'Бесплатные игры каждую неделю.',code:'EPIC25',url:'gaming.html',t:'epic games free gaming'},
-  {c:'gaming',i:'🟢',n:'Xbox Game Pass',de:'3 Months for $1',dr:'3 месяца за $1',dd:'100+ games on console and PC.',ddr:'100+ игр на консоли и ПК.',code:'XBOX3FOR1',url:'gaming.html',t:'xbox gamepass microsoft gaming'},
-  {c:'gaming',i:'🔵',n:'PlayStation Store',de:'25% OFF PS Plus',dr:'Скидка 25% на PS Plus',dd:'Official PlayStation Store.',ddr:'Официальный магазин PS.',code:'PSPLUS25',url:'gaming.html',t:'playstation ps5 sony gaming'},
-  {c:'travel',i:'🏨',n:'Booking.com',de:'Genius saves 20%',dr:'Genius экономит 20%',dd:'Hotels and apartments worldwide.',ddr:'Отели по всему миру.',code:'BOOK20',url:'travel.html',t:'booking hotel travel accommodation'},
-  {c:'travel',i:'🏠',n:'Airbnb',de:'$50 OFF first stay',dr:'Скидка $50 на первое',dd:'Unique stays worldwide.',ddr:'Уникальное жильё.',code:'AIRBNB50',url:'travel.html',t:'airbnb rent home travel'},
-  {c:'travel',i:'✈️',n:'Skyscanner',de:'Flights 70% cheaper',dr:'Рейсы на 70% дешевле',dd:'Compare 100s of airlines.',ddr:'Сравните авиакомпании.',code:'SKY70',url:'travel.html',t:'skyscanner flights cheap airline'},
-  {c:'hosting',i:'🌐',n:'Hostinger',de:'82% OFF + Free Domain',dr:'Скидка 82% + домен',dd:'Best value web hosting.',ddr:'Лучший хостинг по цене.',code:'HOSTINGER82',url:'hosting.html',t:'hostinger hosting web domain'},
-  {c:'hosting',i:'🏷️',n:'Namecheap',de:'.com for $5.98/year',dr:'Домен .com за $5.98',dd:'Cheap domains and hosting.',ddr:'Дешёвые домены и хостинг.',code:'CHEAP598',url:'hosting.html',t:'namecheap domain hosting cheap'},
-  {c:'hosting',i:'🔵',n:'Bluehost',de:'65% OFF + Free Domain',dr:'Скидка 65% + домен',dd:'WordPress recommended hosting.',ddr:'Хостинг для WordPress.',code:'BLUE65',url:'hosting.html',t:'bluehost wordpress hosting'},
 ];
 
 var CAT_LABELS = {
