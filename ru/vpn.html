@@ -97,7 +97,22 @@
 <div id="readProgress"></div>
 
 <script>
-var ITEMS = [];
+var ITEMS = [
+  {
+    logo:'🔒', name:'NordVPN', cat:'VPN',
+    desc:'Самый надёжный VPN в мире — сверхбыстрые серверы в 111 странах, военное шифрование и политика без логов.',
+    deal:'Официальный сайт NordVPN',
+    code:'', badge:'hot', badge_text:'🔥 Рекомендуем',
+    url:'https://go.nordvpn.net/aff_c?offer_id=15&aff_id=151696&url_id=902', stars:'★★★★★', reviews:'12 450 отзывов'
+  },
+  {
+    logo:'🔑', name:'NordPass', cat:'Менеджер паролей',
+    desc:'Премиальный менеджер паролей от создателей NordVPN. Надёжно храните и управляйте всеми паролями.',
+    deal:'Официальный сайт NordPass',
+    code:'', badge:'new', badge_text:'✨ Новинка',
+    url:'https://go.nordpass.io/aff_c?offer_id=488&aff_id=151696&url_id=9356', stars:'★★★★★', reviews:'8 200 отзывов'
+  },
+];
 function renderItems() {
   var grid = document.getElementById('itemsGrid');
   if (!grid) return;
