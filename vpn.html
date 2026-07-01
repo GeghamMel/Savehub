@@ -174,54 +174,61 @@
 <script>
 var lang = 'en';
 
-var VPNS = [];
+var VPNS = [
+  {
+    id:'nordvpn', logo:'🔒', name:'NordVPN', score:'9.8',
+    desc_en:'The world\'s most trusted VPN — ultra-fast servers in 111 countries, military-grade encryption, and an independently audited no-logs policy. Trusted by millions worldwide.',
+    desc_ru:'Самый надёжный VPN в мире — сверхбыстрые серверы в 111 странах, военное шифрование и политика без логов, подтверждённая независимым аудитом.',
+    tags_en:['No Logs','111 Countries','6 Devices','24/7 Support'],
+    tags_ru:['Без логов','111 стран','6 устройств','Поддержка 24/7'],
+    features_en:['✓ 6,000+ servers','✓ Kill switch','✓ Threat Protection','✓ 30-day money back'],
+    features_ru:['✓ 6 000+ серверов','✓ Kill switch','✓ Защита от угроз','✓ 30 дней возврата'],
+    codes:[],
+    url:'https://go.nordvpn.net/aff_c?offer_id=15&aff_id=151696&url_id=902', stars:'★★★★★', reviews:'12,450'
+  },
+  {
+    id:'nordpass', logo:'🔑', name:'NordPass',  score:'9.5',
+    desc_en:'Premium password manager from the makers of NordVPN. Store, autofill and manage all your passwords securely. Works on all devices.',
+    desc_ru:'Премиальный менеджер паролей от создателей NordVPN. Надёжно храните, автозаполняйте и управляйте всеми паролями на всех устройствах.',
+    tags_en:['Password Manager','All Devices','Zero-Knowledge','Secure Sharing'],
+    tags_ru:['Менеджер паролей','Все устройства','Zero-Knowledge','Общий доступ'],
+    features_en:['✓ Unlimited passwords','✓ Password health check','✓ Secure notes','✓ Emergency access'],
+    features_ru:['✓ Неограниченно паролей','✓ Проверка надёжности','✓ Защищённые заметки','✓ Экстренный доступ'],
+    codes:[],
+    url:'https://go.nordpass.io/aff_c?offer_id=488&aff_id=151696&url_id=9356', stars:'★★★★★', reviews:'8,200'
+  },
+];
 
 function renderVPNs(filter) {
   var l = lang;
   var list = document.getElementById('vpnList');
   if (VPNS.length === 0) {
-    list.innerHTML = '<div style="text-align:center;padding:60px 24px;background:white;border-radius:14px;border:1.5px dashed var(--border);"><div style="font-size:3rem;margin-bottom:16px;">🔜</div><p style="color:var(--muted);font-size:1rem;max-width:400px;margin:0 auto;">' + (l==='ru'?'VPN скидки скоро появятся — мы завершаем партнёрства с провайдерами. Загляните позже!':'VPN deals coming soon — we are finalizing partnerships with top providers. Check back shortly!') + '</p></div>';
+    list.innerHTML = '<div style="text-align:center;padding:60px 24px;background:white;border-radius:14px;border:1.5px dashed var(--border);"><div style="font-size:3rem;margin-bottom:16px;">🔜</div><p style="color:var(--muted);font-size:1rem;max-width:400px;margin:0 auto;">' + (l==='ru'?'VPN скидки скоро появятся.':'VPN deals coming soon.') + '</p></div>';
     return;
   }
-  var vpns = filter === 'best' ? VPNS.slice(0,2) : filter === 'cheap' ? [VPNS[2],VPNS[3]] : VPNS;
-
-  list.innerHTML = vpns.map(function(v) {
-    var codes = v.codes.map(function(c) {
-      return '<div class="code-item">' +
-        '<div class="code-item-deal">' + (l==='ru'?c.deal_ru:c.deal_en) + '</div>' +
-        '<div class="code-item-desc">' + (l==='ru'?c.desc_ru:c.desc_en) + '</div>' +
-        '<div class="code-item-bottom">' +
-          '<div class="code-box">' + c.code + '</div>' +
-          '<button class="btn-copy-sm" onclick="copyCode(\'' + c.code + '\',\'' + v.url + '\',this)">' + (l==='ru'?'Копировать':'Copy & Go') + '</button>' +
-        '</div>' +
-      '</div>';
-    }).join('');
-
+  var vpns = VPNS;
+  var html = '';
+  for (var i = 0; i < vpns.length; i++) {
+    var v = vpns[i];
     var tags = (l==='ru'?v.tags_ru:v.tags_en).map(function(t){ return '<span class="vpn-tag">'+t+'</span>'; }).join('');
     var features = (l==='ru'?v.features_ru:v.features_en).map(function(f){ return '<span class="vpn-feature">'+f+'</span>'; }).join('');
-
-    return '<div class="vpn-full-card" id="' + v.id + '">' +
-      '<div class="vpn-card-top">' +
-        '<div class="vpn-logo-big">' + v.logo + '</div>' +
-        '<div class="vpn-main-info">' +
-          '<h2>' + v.name + '</h2>' +
-          '<p>' + (l==='ru'?v.desc_ru:v.desc_en) + '</p>' +
-          '<div class="vpn-tags">' + tags + '</div>' +
-        '</div>' +
-        '<div class="vpn-score">' +
-          '<div class="score-num">' + v.score + '</div>' +
-          '<div class="score-max">/10</div>' +
-          '<div class="score-stars">' + v.stars + '</div>' +
-          '<div style="font-size:0.72rem;color:var(--muted);">' + v.reviews + ' reviews</div>' +
-        '</div>' +
-      '</div>' +
-      '<div class="vpn-card-codes">' + codes + '</div>' +
-      '<div class="vpn-card-footer">' +
-        '<div class="vpn-features">' + features + '</div>' +
-        '<a href="' + v.url + '" target="_blank" rel="nofollow" class="btn-visit-big">' + (l==='ru'?'Перейти на сайт →':'Visit Official Site →') + '</a>' +
-      '</div>' +
-    '</div>';
-  }).join('');
+    html += '<div class="vpn-full-card" id="' + v.id + '">';
+    html += '<div class="vpn-card-top">';
+    html += '<div class="vpn-logo-big">' + v.logo + '</div>';
+    html += '<div class="vpn-main-info">';
+    html += '<h2>' + v.name + '</h2>';
+    html += '<p>' + (l==='ru'?v.desc_ru:v.desc_en) + '</p>';
+    html += '<div class="vpn-tags">' + tags + '</div>';
+    html += '</div>';
+    html += '<div class="vpn-score"><div class="score-num">' + v.score + '</div><div class="score-max">/10</div><div class="score-stars">' + v.stars + '</div></div>';
+    html += '</div>';
+    html += '<div class="vpn-card-footer">';
+    html += '<div class="vpn-features">' + features + '</div>';
+    html += '<a href="' + v.url + '" target="_blank" rel="nofollow" class="btn-visit-big">' + (l==='ru'?'Перейти на официальный сайт →':'Visit Official Site →') + '</a>';
+    html += '</div>';
+    html += '</div>';
+  }
+  list.innerHTML = html;
 }
 
 function filterVPN(type, btn) {
