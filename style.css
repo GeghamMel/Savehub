@@ -403,6 +403,7 @@ img { max-width: 100%; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .footer-brand { grid-column: 1/-1; }
 }
+
 @media(max-width:480px) {
   .categories-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-search { flex-direction: column; }
