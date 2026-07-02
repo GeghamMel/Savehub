@@ -97,7 +97,15 @@
 <div id="readProgress"></div>
 
 <script>
-var ITEMS = [];
+var ITEMS = [
+  {
+    logo:'🔵', name:'Bluehost', cat:'Хостинг',
+    desc:'Хостинг рекомендованный WordPress. Простая настройка, поддержка 24/7, бесплатный SSL и домен. От $3.79/месяц — эксклюзивная цена.',
+    deal:'От $3.79/месяц — Эксклюзивная цена',
+    code:'', badge:'hot', badge_text:'🔥 Эксклюзивная цена',
+    url:'https://bluehost.sjv.io/c/7446694/1376228/11352', stars:'★★★★', reviews:'25 000 отзывов'
+  },
+];
 function renderItems() {
   var grid = document.getElementById('itemsGrid');
   if (!grid) return;
