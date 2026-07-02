@@ -96,7 +96,16 @@
 
 <script>
 var lang = 'en';
-var ITEMS = [];
+var ITEMS = [
+  {
+    logo:'🔵', name:'Bluehost', cat_en:'Hosting', cat_ru:'Хостинг',
+    desc_en:'WordPress recommended hosting. Easy setup, 24/7 support, free SSL and domain included. From just $3.79/month — exclusive SaveHub pricing.',
+    desc_ru:'Хостинг рекомендованный WordPress. Простая настройка, поддержка 24/7, бесплатный SSL и домен. От $3.79/месяц — эксклюзивная цена SaveHub.',
+    deal_en:'From $3.79/month — Exclusive Deal', deal_ru:'От $3.79/месяц — Эксклюзивная цена',
+    code:'', badge:'hot', badge_en:'🔥 Exclusive Deal', badge_ru:'🔥 Эксклюзивная цена',
+    url:'https://bluehost.sjv.io/c/7446694/1376228/11352', stars:'★★★★', reviews_en:'25,000 reviews', reviews_ru:'25 000 отзывов'
+  },
+];
 
 function renderItems() {
   var l = lang;

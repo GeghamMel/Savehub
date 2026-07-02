@@ -86,6 +86,7 @@
       <button class="f-btn active" onclick="setFilter(this,'all')" data-en="All" data-ru="Все">All</button>
       <button class="f-btn" onclick="setFilter(this,'vpn')" data-en="🔒 VPN" data-ru="🔒 VPN">🔒 VPN</button>
       <button class="f-btn" onclick="setFilter(this,'courses')" data-en="🎓 Courses" data-ru="🎓 Курсы">🎓 Courses</button>
+      <button class="f-btn" onclick="setFilter(this,'hosting')" data-en="☁️ Hosting" data-ru="☁️ Хостинг">☁️ Hosting</button>
     </div>
     <div class="res-count" id="cnt"></div>
     <div id="results"></div>
@@ -112,6 +113,7 @@ var cat = 'all';
 var ITEMS = [
   {c:'vpn',i:'🔒',n:'NordVPN',de:'Visit Official NordVPN Site',dr:'Официальный сайт NordVPN',dd:"World's most trusted VPN — 111 countries, no logs.",ddr:'Самый надёжный VPN — 111 стран, без логов.',code:'',url:'https://go.nordvpn.net/aff_c?offer_id=15&aff_id=151696&url_id=902',t:'nordvpn vpn security privacy'},
   {c:'vpn',i:'🔑',n:'NordPass',de:'Visit Official NordPass Site',dr:'Официальный сайт NordPass',dd:'Premium password manager from Nord Security.',ddr:'Премиальный менеджер паролей от Nord Security.',code:'',url:'https://go.nordpass.io/aff_c?offer_id=488&aff_id=151696&url_id=9356',t:'nordpass password manager security'},
+  {c:'hosting',i:'🔵',n:'Bluehost',de:'From $3.79/month — Exclusive Deal',dr:'От $3.79/месяц — Эксклюзивная цена',dd:'WordPress recommended hosting. Free domain and SSL included.',ddr:'Хостинг для WordPress. Бесплатный домен и SSL.',code:'',url:'https://bluehost.sjv.io/c/7446694/1376228/11352',t:'bluehost hosting wordpress web'},
   {c:'courses',i:'🎓',n:'Udemy',de:'Courses from $9.99',dr:'Курсы от $9.99',dd:'200,000+ courses on any topic.',ddr:'200 000+ курсов.',code:'',url:'courses.html',t:'udemy courses learning'},
 ];
 
